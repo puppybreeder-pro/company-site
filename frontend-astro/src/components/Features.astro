@@ -1,0 +1,87 @@
+---
+import { Icon } from "astro-icon/components";
+import { DashboardCarousel } from "./DashboardCarousel.jsx";
+import { publicFeatures, adminFeatures } from "../data/featuresData";
+---
+
+<section id="features" class="section-padding bg-muted/30">
+  <div class="container-custom">
+    <div class="text-center mb-16">
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4"
+      >
+        Everything You Need, Nothing You Don't
+      </h2>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+        Built specifically for dog breeders. Not e-commerce. Not blogging. Just
+        breeding.
+      </p>
+    </div>
+
+    <!-- Public Features -->
+    <div class="text-center mb-8">
+      <h3 class="text-2xl font-bold text-foreground mb-2">What Families See</h3>
+      <p class="text-muted-foreground">
+        Professional, trustworthy, easy to navigate information
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        publicFeatures.map((feature) => (
+          <div class="p-6 hover-lift flex flex-col bg-card rounded-xl border shadow">
+            <div class="w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center mb-4">
+              <Icon
+                name={`lucide:${feature.icon}`}
+                class="w-6 h-6 text-success"
+              />
+            </div>
+            <h4 class="text-lg font-semibold text-foreground mb-2">
+              {feature.title}
+            </h4>
+            <p class="text-sm text-muted-foreground leading-relaxed">
+              {feature.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Admin Features -->
+    <div class="mt-16">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold text-foreground mb-2">
+          You Are In Control
+        </h3>
+        <p class="text-muted-foreground">Simple dashboard, powerful features</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          adminFeatures.map((feature) => (
+            <div class="p-6 hover-lift flex flex-col bg-card rounded-xl border shadow">
+              <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Icon
+                  name={`lucide:${feature.icon}`}
+                  class="w-6 h-6 text-primary"
+                />
+              </div>
+              <h4 class="text-lg font-semibold text-foreground mb-2">
+                {feature.title}
+              </h4>
+              <p class="text-sm text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Dashboard Carousel -->
+    <div class="mt-16 max-w-5xl mx-auto">
+      <h3 class="text-2xl font-bold text-foreground mb-8 text-center">
+        Your Command Center
+      </h3>
+      <DashboardCarousel client:visible />
+    </div>
+  </div>
+</section>

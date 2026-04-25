@@ -1,0 +1,19 @@
+---
+import { TestimonialsCarousel } from './TestimonialsCarousel.jsx';
+import { testimonials } from '../data/testimonialsData';
+---
+
+<section id="testimonials" class="section-padding bg-background">
+  <div class="container-custom">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        What Breeders Say
+      </h2>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+        From frustrated to proud—hear from breeders who made the switch.
+      </p>
+    </div>
+
+    <TestimonialsCarousel testimonials={testimonials} client:visible />
+  </div>
+</section>

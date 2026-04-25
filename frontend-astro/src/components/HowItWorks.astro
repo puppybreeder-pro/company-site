@@ -1,0 +1,54 @@
+---
+import { Icon } from 'astro-icon/components';
+import { steps } from '../data/howItWorksData';
+---
+
+<section id="how-it-works" class="section-padding bg-background">
+  <div class="container-custom">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        Your Site Ready in 2 Days, Not Months - Here's How
+      </h2>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+        No technical setup. No endless back-and-forth. Just a straightforward path to your professional website.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto mb-12 relative">
+      {steps.map((step, index) => (
+        <div class="relative">
+          <div class="relative p-8 hover-lift bg-card rounded-xl border shadow h-full">
+            <div class="absolute top-4 right-4 text-4xl font-bold text-muted/20">
+              {step.number}
+            </div>
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+              <span class="text-3xl">{step.icon}</span>
+            </div>
+            <h3 class="text-xl font-bold text-foreground mb-3">
+              {step.title}
+            </h3>
+            <p class="text-muted-foreground leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+
+          {index < steps.length - 1 && (
+            <div class="hidden lg:flex absolute top-1/2 -right-6 transform -translate-y-1/2 z-10">
+              <Icon name="lucide:arrow-right" class="w-6 h-6 text-primary" />
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center">
+      <a
+        href="#cta"
+        class="inline-flex items-center justify-center gap-2 h-14 rounded-lg px-10 text-lg font-medium bg-primary text-primary-foreground shadow hover:bg-primary/90 hover:shadow-lg transition-all group"
+      >
+        Start Your Journey Today
+        <Icon name="lucide:arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+      </a>
+    </div>
+  </div>
+</section>

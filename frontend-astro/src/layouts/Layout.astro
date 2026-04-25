@@ -1,0 +1,118 @@
+---
+import '../styles/global.css';
+import { Toaster } from '../ui/sonner';
+import { faqData } from '../data/faqData';
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://www.puppybreeder.pro');
+
+const siteName = 'PuppyBreeder.PRO';
+const siteDescription = 'Professional websites for dog breeders — launched in 48 hours, fully managed, purpose-built for your breeding program.';
+const ogImage = new URL('/images/og-default.jpg', 'https://www.puppybreeder.pro');
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'PuppyBreeder.PRO',
+  description: siteDescription,
+  url: 'https://www.puppybreeder.pro',
+  logo: 'https://www.puppybreeder.pro/favicon.svg',
+  priceRange: '$$',
+  telephone: '+1-555-000-0000',
+  email: 'steven@puppybreeder.pro',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'US',
+  },
+  sameAs: [],
+};
+
+const offerSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Offer',
+  name: 'Gold Standard Plan',
+  description: 'Fully hosted, branded website for dog breeders with custom design, admin dashboard, puppy listings, and managed hosting.',
+  url: 'https://www.puppybreeder.pro/#pricing',
+  priceCurrency: 'USD',
+  price: '79.00',
+  priceValidUntil: '2027-12-31',
+  availability: 'https://schema.org/InStock',
+  offeredBy: {
+    '@type': 'LocalBusiness',
+    name: 'PuppyBreeder.PRO',
+  },
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={siteDescription} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#5e3ae3" />
+
+    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:title" content={siteName} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:image" content={ogImage.href} />
+    <meta property="og:site_name" content={siteName} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteName} />
+    <meta name="twitter:description" content={siteDescription} />
+    <meta name="twitter:image" content={ogImage.href} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
+
+    <title>{siteName} — Professional Websites for Dog Breeders</title>
+  </head>
+  <body class="bg-background text-foreground">
+    <slot />
+    <Toaster theme="light" />
+
+    <script>
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReduced) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.setAttribute('data-revealed', '');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
+        );
+        document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
+      } else {
+        document.querySelectorAll('[data-reveal]').forEach((el) => {
+          el.setAttribute('data-revealed', '');
+        });
+      }
+    </script>
+  </body>
+</html>

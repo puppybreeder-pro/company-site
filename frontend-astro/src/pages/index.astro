@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Header } from '../components/Header.jsx';
+import { Hero } from '../components/Hero.jsx';
+import ProblemSolution from '../components/ProblemSolution.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Features from '../components/Features.astro';
+import { LeadMagnet } from '../components/LeadMagnet.jsx';
+import { Pricing } from '../components/Pricing.jsx';
+import Testimonials from '../components/Testimonials.astro';
+import Showroom from '../components/Showroom.astro';
+import FounderSection from '../components/FounderSection.astro';
+import { FAQ } from '../components/FAQ.jsx';
+import { EthicalCommitment } from '../components/EthicalCommitment.jsx';
+import { CTA } from '../components/CTA.jsx';
+import Footer from '../components/Footer.astro';
+import { PromoBanner } from '../components/PromoBanner.jsx';
+---
+
+<Layout>
+  <Header client:load />
+  <main>
+    <Hero client:load />
+    <div data-reveal>
+      <ProblemSolution />
+    </div>
+    <div data-reveal>
+      <HowItWorks />
+    </div>
+    <div data-reveal>
+      <Features />
+    </div>
+    <div data-reveal>
+      <LeadMagnet client:visible />
+    </div>
+    <div data-reveal>
+      <Pricing client:load />
+    </div>
+    <div data-reveal>
+      <Testimonials />
+    </div>
+    <div data-reveal>
+      <Showroom />
+    </div>
+    <div data-reveal>
+      <FounderSection />
+    </div>
+    <div data-reveal>
+      <FAQ client:visible />
+    </div>
+    <div data-reveal>
+      <EthicalCommitment client:visible />
+    </div>
+    <div data-reveal>
+      <CTA client:visible />
+    </div>
+  </main>
+  <Footer />
+   {/* <PromoBanner client:load /> */}
+</Layout>
