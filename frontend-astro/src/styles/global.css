@@ -270,6 +270,7 @@ body * {
 }
 
 button, a, input, textarea, select {
+  cursor: pointer;
   transition-property: color, background-color, border-color, box-shadow, opacity;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

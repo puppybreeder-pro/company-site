@@ -29,11 +29,31 @@ export async function submitToWeb3Forms(data) {
     body: JSON.stringify(payload),
   });
 
-  const result = await response.json();
+  let result;
+  try {
+    result = await response.json();
+  } catch {
+    return {
+      success: false,
+      message: 'Could not read the form service response. Please try again.',
+    };
+  }
 
-  if (result.success) {
+  if (!response.ok) {
+    const msg =
+      result && typeof result.message === 'string'
+        ? result.message
+        : `The form service returned an error (${response.status}). Please try again.`;
+    return { success: false, message: msg };
+  }
+
+  if (result && result.success === true) {
     return { success: true, message: result.message || 'Email sent successfully!' };
   }
 
-  return { success: false, message: result.message || 'Submission failed. Please try again.' };
+  const errMsg =
+    result && typeof result.message === 'string'
+      ? result.message
+      : 'Submission failed. Please try again.';
+  return { success: false, message: errMsg };
 }

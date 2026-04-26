@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon/components";
+import { tried, whatif } from "../../data/offerProblemSolutionData";
+---
+
+<section class="section-padding bg-muted/30">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        You've Probably Tried This Before
+      </h2>
+      <p class="text-lg text-muted-foreground">
+        Most breeders we talk to have been through the same frustrations.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="p-8 bg-card border border-border rounded-xl shadow">
+        <div class="flex items-center justify-center lg:justify-start gap-3 mb-6">
+          <div class="w-12 h-12 rounded-full bg-muted/50 flex items-center justify-center flex-shrink-0">
+            <Icon name="lucide:help-circle" class="w-6 h-6 text-muted-foreground" />
+          </div>
+          <h3 class="text-2xl font-bold text-foreground">You've probably tried…</h3>
+        </div>
+        <ul class="space-y-4">
+          {tried.map((item) => (
+            <li class="flex gap-3">
+              <Icon name="lucide:minus" class="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+              <span class="text-foreground/80">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="p-8 bg-card border-2 border-success rounded-xl shadow">
+        <div class="flex items-center justify-center lg:justify-start gap-3 mb-6">
+          <div class="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center flex-shrink-0">
+            <Icon name="lucide:sparkles" class="w-6 h-6 text-success" />
+          </div>
+          <h3 class="text-2xl font-bold text-foreground">What if it just worked?</h3>
+        </div>
+        <ul class="space-y-4">
+          {whatif.map((item) => (
+            <li class="flex gap-3">
+              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+              <span class="text-foreground/80">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,13 +1,13 @@
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
+import { Button } from '../../ui/button';
+import { Input } from '../../ui/input';
 import { FileText } from 'lucide-react';
-import { useFormSubmission } from '../hooks/useFormSubmission';
+import { useFormSubmission } from '../../hooks/useFormSubmission';
 
-const LEAD_MAGNET_INITIAL = { email: '', source: 'lead-magnet-pdf', botcheck: '' };
+const LEAD_MAGNET_INITIAL = { email: '', source: 'offer-lead-magnet-pdf', botcheck: '' };
 
 const LEAD_MAGNET_PDF_URL = '/docs/7-must-haves-professional-breeder-website.pdf';
 
-export const LeadMagnet = () => {
+export const OfferLeadMagnet = () => {
   const { values, submitting, handleChange, handleSubmit } = useFormSubmission(
     LEAD_MAGNET_INITIAL,
     {
@@ -16,7 +16,7 @@ export const LeadMagnet = () => {
     },
     { title: 'Could not send the guide', description: 'Please try again.' },
     {
-      subject: 'New lead magnet download — Puppy Breeder Pro website',
+      subject: 'New lead magnet download — Puppy Breeder Pro offer page',
       openUrlOnSuccess: LEAD_MAGNET_PDF_URL,
     }
   );
@@ -25,7 +25,7 @@ export const LeadMagnet = () => {
     <section
       id="lead-magnet"
       className="py-10 md:py-12 bg-pastel-purple/50"
-      data-testid="lead-magnet-section"
+      data-testid="offer-lead-magnet-section"
     >
       <div className="container-custom">
         <div className="grid md:grid-cols-[auto,1fr] gap-6 items-center max-w-3xl mx-auto">
@@ -44,13 +44,13 @@ export const LeadMagnet = () => {
               The 7 Must-Haves for a Professional Breeder Website
             </h3>
             <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-              (and 3 red flags that quietly kill puppy inquiries). Built from years of working with licensed breeders. Yours free—just tell us where to send it.
+              Every week without a professional site is another week families can&rsquo;t find you. This guide shows you exactly what&rsquo;s missing — and what to do about it. (Plus 3 red flags that quietly kill puppy inquiries.)
             </p>
 
             <form
               onSubmit={handleSubmit}
               className="flex flex-col sm:flex-row gap-3"
-              data-testid="lead-magnet-form"
+              data-testid="offer-lead-magnet-form"
             >
               <div style={{ display: 'none' }} aria-hidden="true">
                 <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" checked={!!values.botcheck} onChange={handleChange} />
@@ -64,7 +64,7 @@ export const LeadMagnet = () => {
                 placeholder="your@email.com"
                 aria-label="Your email"
                 className="h-12 text-base bg-background border-2"
-                data-testid="lead-magnet-email"
+                data-testid="offer-lead-magnet-email"
               />
               <Button
                 type="submit"
@@ -72,7 +72,7 @@ export const LeadMagnet = () => {
                 size="lg"
                 disabled={submitting}
                 className="whitespace-nowrap"
-                data-testid="lead-magnet-submit"
+                data-testid="offer-lead-magnet-submit"
               >
                 {submitting ? 'Sending…' : 'Send Me the PDF'}
               </Button>

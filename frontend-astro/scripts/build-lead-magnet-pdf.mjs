@@ -59,8 +59,7 @@ async function buildPdf() {
     .replaceAll('{{TITLE}}', title)
     .replaceAll('{{SUBTITLE}}', subtitle)
     .replace('{{STYLE}}', css)
-    .replace('{{CONTENT}}', bodyHtml)
-    .replace('{{DATE}}', new Date().toISOString().slice(0, 10));
+    .replace('{{CONTENT}}', bodyHtml);
 
   const browser = await chromium.launch();
   const page = await browser.newPage();
@@ -81,7 +80,7 @@ async function buildPdf() {
     displayHeaderFooter: true,
     headerTemplate: '<div></div>',
     footerTemplate:
-      '<div style="width:100%;font-size:9px;padding:0 0.65in;color:#5b6070;font-family:Arial,sans-serif;display:flex;justify-content:space-between;">' +
+      '<div style="width:100%;font-size:9px;padding:0 0.65in;color:hsl(211 5% 38%);font-family:Instrument Sans,Segoe UI,Roboto,sans-serif;display:flex;justify-content:space-between;">' +
       '<span>PuppyBreeder.PRO</span>' +
       '<span><span class="pageNumber"></span> / <span class="totalPages"></span></span>' +
       '</div>',

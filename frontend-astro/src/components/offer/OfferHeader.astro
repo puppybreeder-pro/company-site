@@ -1,0 +1,19 @@
+---
+import { BRAND_NAME, BRAND_SUFFIX, CALENDLY_URL } from '../../constants/index.js';
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="container-custom flex h-16 items-center justify-between">
+    <a href="/" class="flex items-center text-xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer">
+      {BRAND_NAME}<span class="text-primary">{BRAND_SUFFIX}</span>
+    </a>
+    <a
+      href={CALENDLY_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center h-10 rounded-lg px-6 text-sm font-medium bg-primary text-primary-foreground shadow hover:bg-primary/90 hover:shadow-lg transition-all"
+    >
+      Book a Free Call
+    </a>
+  </div>
+</header>

@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OfferHeader from '../components/offer/OfferHeader.astro';
+import { OfferHero } from '../components/offer/OfferHero.jsx';
+import OfferEmpathy from '../components/offer/OfferEmpathy.astro';
+import OfferOutcomes from '../components/offer/OfferOutcomes.astro';
+import OfferHowItWorks from '../components/offer/OfferHowItWorks.astro';
+import FounderSection from '../components/FounderSection.astro';
+import { OfferPricing } from '../components/offer/OfferPricing.jsx';
+import { OfferLeadMagnet } from '../components/offer/OfferLeadMagnet.jsx';
+import Testimonials from '../components/Testimonials.astro';
+import { OfferFAQ } from '../components/offer/OfferFAQ.jsx';
+import { OfferCTA } from '../components/offer/OfferCTA.jsx';
+import Footer from '../components/Footer.astro';
+import { offerFaqData } from '../data/offerFaqData';
+
+const offerTitle = 'PuppyBreeder.PRO — Professional Websites for Dog Breeders | Offer';
+const offerDescription = 'Stop fighting with website builders. Get a professionally managed breeding website launched in 48 hours — with everything included for one transparent price.';
+
+const offerFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: offerFaqData.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+
+const offerSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Offer',
+  name: 'Gold Standard Plan',
+  description: 'Fully hosted, branded website for dog breeders with custom design, admin dashboard, puppy listings, Calendly integration, Google Analytics, and managed hosting — everything included.',
+  url: 'https://www.puppybreeder.pro/offer#pricing',
+  priceCurrency: 'USD',
+  price: '99.00',
+  priceValidUntil: '2027-12-31',
+  availability: 'https://schema.org/InStock',
+  offeredBy: {
+    '@type': 'LocalBusiness',
+    name: 'PuppyBreeder.PRO',
+  },
+};
+---
+
+<Layout
+  title={offerTitle}
+  description={offerDescription}
+  includeFaqSchema={false}
+  includeOfferSchema={false}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(offerFaqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
+
+  <OfferHeader />
+  <main>
+    <OfferHero client:load />
+    <div data-reveal>
+      <OfferEmpathy />
+    </div>
+    <div data-reveal>
+      <OfferOutcomes />
+    </div>
+    <div data-reveal>
+      <OfferHowItWorks />
+    </div>
+    <div data-reveal>
+      <FounderSection />
+    </div>
+    <div data-reveal>
+      <OfferLeadMagnet client:visible />
+    </div>
+    <div data-reveal>
+      <OfferPricing client:load />
+    </div>
+    <div data-reveal>
+      <Testimonials />
+    </div>
+    <div data-reveal>
+      <OfferFAQ client:visible />
+    </div>
+    <div data-reveal>
+      <OfferCTA client:visible />
+    </div>
+  </main>
+  <Footer />
+</Layout>

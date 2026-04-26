@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+import { DashboardCarousel } from "../DashboardCarousel.jsx";
+import { publicOutcomes, adminOutcomes } from "../../data/offerFeaturesData";
+---
+
+<section id="outcomes" class="section-padding bg-background">
+  <div class="container-custom">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        What You Get, Not What It Does
+      </h2>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+        Every feature answers one question: "What does this mean for me and my dogs?"
+      </p>
+    </div>
+
+    <div class="text-center mb-8">
+      <h3 class="text-2xl font-bold text-foreground mb-2">What Families See</h3>
+      <p class="text-muted-foreground">
+        Professional, trustworthy — the kind of presence that gets inquiries
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {publicOutcomes.map((feature) => (
+        <div class="p-6 hover-lift flex flex-col bg-card rounded-xl border shadow">
+          <div class="w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center mb-4">
+            <Icon name={`lucide:${feature.icon}`} class="w-6 h-6 text-success" />
+          </div>
+          <h4 class="text-lg font-semibold text-foreground mb-2">{feature.title}</h4>
+          <p class="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold text-foreground mb-2">Your Time Back</h3>
+        <p class="text-muted-foreground">Manage everything in minutes, not hours</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {adminOutcomes.map((feature) => (
+          <div class="p-6 hover-lift flex flex-col bg-card rounded-xl border shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <Icon name={`lucide:${feature.icon}`} class="w-6 h-6 text-primary" />
+            </div>
+            <h4 class="text-lg font-semibold text-foreground mb-2">{feature.title}</h4>
+            <p class="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-16 max-w-5xl mx-auto">
+      <h3 class="text-2xl font-bold text-foreground mb-8 text-center">
+        See It In Action
+      </h3>
+      <DashboardCarousel client:load />
+    </div>
+  </div>
+</section>

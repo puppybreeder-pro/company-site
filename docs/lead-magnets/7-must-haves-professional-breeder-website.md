@@ -159,4 +159,32 @@ You need a website that communicates professionalism, clarity, and trust from th
 
 Build these seven must-haves, avoid the three red flags, and your site starts doing what it should have done all along: helping the right families find you with confidence.
 
-If you want to turn this into a one-page website audit worksheet for your team, use this guide as your scoring rubric and grade each section from 1 to 5. Anything below 4 becomes your next improvement priority.
+Use the rubric below to score your site in one pass. Anything below **4** is your next improvement priority.
+
+---
+
+## Website audit rubric
+
+**Scale (each row):** **1** = missing or actively hurts trust · **3** = okay but fuzzy · **5** = clear, professional, buyer-ready.
+
+Score each must-have **1–5** (write the number in the blank):
+
+1. **First impression** — Who you are, region or service area, and one obvious next step above the fold. **___**
+2. **About page** — Philosophy, ethics, health standards, experience, real photos. **___**
+3. **Puppy / litter listings** — Timeline, temperament hints, health details, and what happens next per puppy or litter. **___**
+4. **Program credibility** — Adult dogs, pedigrees or titles where relevant, health testing, recent wins or achievements. **___**
+5. **Application & inquiry flow** — Useful questions, mobile-friendly form, expectations set, reliable follow-up. **___**
+6. **Educational content** — Solid FAQ plus occasional posts that answer repeat questions. **___**
+7. **Speed, mobile, and freshness** — Fast on phones, easy navigation, content you actually keep current. **___**
+
+**Red flags (check any that apply — treat as urgent fixes):**
+
+- [ ] **Social-only** — No real site; Instagram/Facebook is the main “home.”
+- [ ] **No clear next step** — Visitors cannot tell how to apply, inquire, or reserve.
+- [ ] **Stale or broken** — Old litters, dead links, or endless “coming soon.”
+
+**How to read your scores**
+
+- **Average 4+** across the seven rows: you are in strong shape; polish weak rows first.
+- **Any row under 4:** that row is your next sprint before adding new pages or traffic.
+- **Any red flag checked:** address it before worrying about SEO or ads — it quietly costs inquiries.

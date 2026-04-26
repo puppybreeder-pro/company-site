@@ -3,11 +3,16 @@
 }
 
 :root {
-  --ink: #1e2433;
-  --muted: #5b6070;
-  --primary: #4f46e5;
-  --line: #e6e8ef;
-  --bg-soft: #f6f7ff;
+  --background: hsl(220 27% 96%);
+  --foreground: hsl(340 5% 13%);
+  --primary: hsl(253 75% 56%);
+  --secondary: hsl(244 71% 68%);
+  --accent: hsl(0 96% 74%);
+  --muted-foreground: hsl(211 5% 38%);
+  --border: hsl(243 22% 88%);
+  --pastel-purple: hsl(277 57% 92%);
+  --gradient-warm: linear-gradient(135deg, hsl(277 57% 92%) 0%, hsl(220 27% 96%) 100%);
+  --gradient-trust: linear-gradient(135deg, hsl(253 75% 56%) 0%, hsl(244 71% 68%) 100%);
 }
 
 * {
@@ -18,9 +23,9 @@ html,
 body {
   margin: 0;
   padding: 0;
-  color: var(--ink);
+  color: var(--foreground);
   background: white;
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-family: "Instrument Sans", "Segoe UI", "Roboto", sans-serif;
   line-height: 1.6;
 }
 
@@ -29,11 +34,16 @@ body {
 }
 
 .cover {
-  background: linear-gradient(180deg, var(--bg-soft) 0%, #ffffff 100%);
-  border: 1px solid var(--line);
-  border-radius: 14px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    var(--gradient-warm) border-box;
+  border: 1px solid transparent;
+  border-radius: 16px;
   padding: 28px 28px 24px;
   margin: 0 0 22px;
+  box-shadow:
+    0 1px 2px 0 rgb(94 58 227 / 0.06),
+    0 10px 20px -8px rgb(94 58 227 / 0.14);
 }
 
 .eyebrow {
@@ -46,6 +56,9 @@ body {
 }
 
 h1 {
+  font-family: "Instrument Serif", serif;
+  color: var(--foreground);
+  font-weight: 400;
   margin: 0 0 10px;
   font-size: 34px;
   line-height: 1.15;
@@ -55,7 +68,7 @@ h1 {
 .dek,
 .meta {
   margin: 0;
-  color: var(--muted);
+  color: var(--muted-foreground);
 }
 
 .dek {
@@ -72,6 +85,9 @@ h1 {
 }
 
 .content h2 {
+  font-family: "Instrument Serif", serif;
+  color: var(--foreground);
+  font-weight: 400;
   break-after: avoid-page;
   margin: 28px 0 10px;
   padding-top: 2px;
@@ -84,6 +100,9 @@ h1 {
 }
 
 .content h3 {
+  font-family: "Instrument Serif", serif;
+  color: var(--foreground);
+  font-weight: 400;
   break-after: avoid-page;
   margin: 18px 0 8px;
   font-size: 16px;
@@ -92,6 +111,15 @@ h1 {
 
 .content p {
   margin: 0 0 10px;
+}
+
+.content a {
+  color: var(--primary);
+  text-underline-offset: 2px;
+}
+
+.content strong {
+  font-weight: 600;
 }
 
 .content ul {
@@ -105,7 +133,7 @@ h1 {
 
 .content hr {
   border: 0;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
   margin: 18px 0;
 }
 
@@ -113,7 +141,7 @@ h1 {
   margin: 14px 0;
   border-left: 3px solid var(--primary);
   padding: 2px 0 2px 12px;
-  color: var(--muted);
+  color: var(--muted-foreground);
 }
 
 .content h2:nth-of-type(8),
@@ -123,7 +151,7 @@ h1 {
 
 .closing-note {
   margin-top: 18px;
-  color: var(--muted);
+  color: var(--muted-foreground);
   font-size: 10px;
   text-align: right;
 }
