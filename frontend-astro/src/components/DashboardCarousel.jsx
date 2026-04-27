@@ -11,11 +11,21 @@ export const DashboardCarousel = () => {
   const goToSlide = (index) => setCurrentSlide(index);
 
   return (
-    <Card className="relative bg-gradient-to-br from-primary/5 to-accent/5 overflow-hidden">
-      <div className="relative">
-        {dashboardSlides.map((slide, index) => (
-          <Slide key={index} slide={slide} isActive={index === currentSlide} />
-        ))}
+    <Card className="relative bg-gradient-to-br from-primary/5 to-accent/5 overflow-hidden pb-12">
+      <div className="overflow-hidden">
+        <div
+          className="flex transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
+          style={{ transform: `translate3d(-${currentSlide * 100}%, 0, 0)` }}
+          aria-live="polite"
+        >
+          {dashboardSlides.map((slide, index) => (
+            <Slide
+              key={index}
+              slide={slide}
+              isActive={index === currentSlide}
+            />
+          ))}
+        </div>
       </div>
 
       <NavigationButton direction="prev" onClick={prevSlide} ariaLabel="Previous slide" />
@@ -26,10 +36,10 @@ export const DashboardCarousel = () => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
+            className={`h-2 rounded-full transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
               index === currentSlide
                 ? 'bg-primary w-8'
-                : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                : 'bg-muted-foreground/30 hover:bg-muted-foreground/50 w-2'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -41,13 +51,18 @@ export const DashboardCarousel = () => {
 
 const Slide = ({ slide, isActive }) => (
   <div
-    className={`transition-opacity duration-500 ${
-      isActive ? 'opacity-100' : 'opacity-0 absolute inset-0 pointer-events-none'
-    }`}
+    className="shrink-0 grow-0 basis-full"
+    aria-hidden={!isActive}
   >
     <div className="p-8">
       <div className="rounded-lg overflow-hidden shadow-xl mb-6">
-        <img src={slide.image} alt={slide.title} className="w-full h-auto" />
+        <img
+          src={slide.image}
+          alt={slide.title}
+          className="w-full h-auto"
+          loading="lazy"
+          draggable="false"
+        />
       </div>
       <div className="text-center">
         <h4 className="text-xl font-bold text-foreground mb-2">{slide.title}</h4>

@@ -50,9 +50,9 @@ const defaultOfferSchema = includeOfferSchema ? {
   '@type': 'Offer',
   name: 'Gold Standard Plan',
   description: 'Fully hosted, branded website for dog breeders with custom design, admin dashboard, puppy listings, and managed hosting.',
-  url: 'https://www.puppybreeder.pro/#pricing',
+  url: 'https://www.puppybreeder.pro/offer#pricing',
   priceCurrency: 'USD',
-  price: '79.00',
+  price: '99.00',
   priceValidUntil: '2027-12-31',
   availability: 'https://schema.org/InStock',
   offeredBy: {
@@ -95,11 +95,17 @@ const defaultOfferSchema = includeOfferSchema ? {
 
     <title>{title}</title>
   </head>
-  <body class="bg-background text-foreground">
+  <body class="bg-background text-foreground" data-no-transitions>
     <slot />
     <Toaster client:load theme="light" />
 
     <script>
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          document.body.removeAttribute('data-no-transitions');
+        });
+      });
+
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (!prefersReduced) {
         const observer = new IntersectionObserver(

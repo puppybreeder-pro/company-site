@@ -1,60 +1,91 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Header } from '../components/Header.jsx';
-import { Hero } from '../components/Hero.jsx';
-import ProblemSolution from '../components/ProblemSolution.astro';
-import HowItWorks from '../components/HowItWorks.astro';
-import Features from '../components/Features.astro';
-import { LeadMagnet } from '../components/LeadMagnet.jsx';
-import { Pricing } from '../components/Pricing.jsx';
-import Testimonials from '../components/Testimonials.astro';
-import Showroom from '../components/Showroom.astro';
+import { OfferHero } from '../components/offer/OfferHero.jsx';
+import OfferEmpathy from '../components/offer/OfferEmpathy.astro';
+import OfferOutcomes from '../components/offer/OfferOutcomes.astro';
+import OfferHowItWorks from '../components/offer/OfferHowItWorks.astro';
 import FounderSection from '../components/FounderSection.astro';
-import { FAQ } from '../components/FAQ.jsx';
-import { EthicalCommitment } from '../components/EthicalCommitment.jsx';
-import { CTA } from '../components/CTA.jsx';
+import { OfferPricing } from '../components/offer/OfferPricing.jsx';
+import { OfferLeadMagnet } from '../components/offer/OfferLeadMagnet.jsx';
+import Testimonials from '../components/Testimonials.astro';
+import { OfferFAQ } from '../components/offer/OfferFAQ.jsx';
+import { OfferCTA } from '../components/offer/OfferCTA.jsx';
 import Footer from '../components/Footer.astro';
-import { PromoBanner } from '../components/PromoBanner.jsx';
+import { offerFaqData } from '../data/offerFaqData';
+
+const homeTitle = 'PuppyBreeder.PRO — Professional Websites for Dog Breeders';
+const homeDescription = 'Stop fighting with website builders. Get a professionally managed breeding website launched in 48 hours — with everything included for one transparent price.';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: offerFaqData.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+
+const offerSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Offer',
+  name: 'Gold Standard Plan',
+  description: 'Fully hosted, branded website for dog breeders with custom design, admin dashboard, puppy listings, Calendly integration, Google Analytics, and managed hosting — everything included.',
+  url: 'https://www.puppybreeder.pro/#pricing',
+  priceCurrency: 'USD',
+  price: '99.00',
+  priceValidUntil: '2027-12-31',
+  availability: 'https://schema.org/InStock',
+  offeredBy: {
+    '@type': 'LocalBusiness',
+    name: 'PuppyBreeder.PRO',
+  },
+};
 ---
 
-<Layout>
+<Layout
+  title={homeTitle}
+  description={homeDescription}
+  includeFaqSchema={false}
+  includeOfferSchema={false}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
+
   <Header client:load />
   <main>
-    <Hero client:load />
+    <OfferHero client:load />
     <div data-reveal>
-      <ProblemSolution />
+      <OfferEmpathy />
     </div>
     <div data-reveal>
-      <HowItWorks />
+      <OfferOutcomes />
     </div>
     <div data-reveal>
-      <Features />
-    </div>
-    <div data-reveal>
-      <LeadMagnet client:visible />
-    </div>
-    <div data-reveal>
-      <Pricing client:load />
-    </div>
-    <div data-reveal>
-      <Testimonials />
-    </div>
-    <div data-reveal>
-      <Showroom />
+      <OfferHowItWorks />
     </div>
     <div data-reveal>
       <FounderSection />
     </div>
     <div data-reveal>
-      <FAQ client:visible />
+      <OfferLeadMagnet client:visible />
     </div>
     <div data-reveal>
-      <EthicalCommitment client:visible />
+      <OfferPricing client:load />
     </div>
     <div data-reveal>
-      <CTA client:visible />
+      <Testimonials />
+    </div>
+    <div data-reveal>
+      <OfferFAQ client:visible />
+    </div>
+    <div data-reveal>
+      <OfferCTA client:visible />
     </div>
   </main>
   <Footer />
-   {/* <PromoBanner client:load /> */}
 </Layout>
