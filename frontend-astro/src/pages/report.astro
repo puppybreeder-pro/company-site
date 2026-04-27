@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ReportHeader from '../components/report/ReportHeader.astro';
+import ReportHero from '../components/report/ReportHero.astro';
+import CodeOfConduct from '../components/report/CodeOfConduct.astro';
+import { ReportForm } from '../components/report/ReportForm.jsx';
+import ReportCTA from '../components/report/ReportCTA.astro';
+import Footer from '../components/Footer.astro';
+
+const reportTitle = 'Report Unethical Breeding — PuppyBreeder.PRO';
+const reportDescription = 'Report breeders who violate our Code of Conduct. All reports are kept strictly confidential. Help us protect the welfare of dogs and the families who love them.';
+---
+
+<Layout
+  title={reportTitle}
+  description={reportDescription}
+  includeFaqSchema={false}
+  includeOfferSchema={false}
+>
+  <ReportHeader />
+  <main>
+    <ReportHero />
+    <div data-reveal>
+      <CodeOfConduct />
+    </div>
+    <div data-reveal>
+      <ReportForm client:load />
+    </div>
+    <div data-reveal>
+      <ReportCTA />
+    </div>
+  </main>
+  <Footer />
+</Layout>

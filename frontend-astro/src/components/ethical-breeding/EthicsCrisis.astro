@@ -1,0 +1,54 @@
+---
+import { Icon } from 'astro-icon/components';
+import { crisisStats, scottishGovQuote } from '../../data/ethicalBreedingData';
+---
+
+<section class="section-padding bg-muted/30">
+  <div class="container-custom">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          The Crisis of Illegal Puppy Mills and Puppy Trading
+        </h2>
+        <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+          According to many heartbreaking news reports and investigative research,
+          including{' '}
+          <a
+            href={scottishGovQuote.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary font-bold hover:underline"
+          >
+            findings from the Scottish Government
+          </a>, the global illegal puppy trade has devastating consequences for animal
+          welfare, consumers, and society as a whole.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+        {crisisStats.map((stat) => (
+          <div class="flex gap-3 p-4 bg-card border border-border rounded-lg">
+            <Icon name="lucide:alert-circle" class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+            <span class="text-sm text-foreground/80">{stat.text}</span>
+          </div>
+        ))}
+      </div>
+
+      <blockquote class="border-l-4 border-accent bg-accent/5 pl-5 pr-4 py-4 my-2 rounded-r-md">
+        <p class="italic text-foreground text-base sm:text-lg leading-relaxed font-medium">
+          "{scottishGovQuote.text}"
+        </p>
+        <footer class="text-sm text-muted-foreground mt-2">
+          — <a
+            href={scottishGovQuote.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary hover:underline"
+          >
+            {scottishGovQuote.attribution}
+          </a>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</section>

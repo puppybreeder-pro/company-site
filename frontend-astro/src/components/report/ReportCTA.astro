@@ -1,0 +1,38 @@
+---
+import { Icon } from 'astro-icon/components';
+import { REPORT_EMAIL } from '../../constants/index.js';
+---
+
+<section class="section-padding bg-background">
+  <div class="container-custom">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-6">
+        <Icon name="lucide:lock" class="w-6 h-6 text-primary" />
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+        Your Report Is Confidential
+      </h2>
+      <p class="text-muted-foreground leading-relaxed mb-6">
+        We take every report seriously. Your identity and contact information will
+        never be shared with the breeder in question. Reports are reviewed by our
+        team and appropriate action is taken.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="/"
+          class="inline-flex items-center justify-center h-10 rounded-lg px-6 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground shadow-sm transition-all cursor-pointer"
+        >
+          <Icon name="lucide:arrow-left" class="w-4 h-4 mr-2" />
+          Back to Homepage
+        </a>
+        <a
+          href={`mailto:${REPORT_EMAIL}`}
+          class="inline-flex items-center justify-center h-10 rounded-lg px-6 text-sm font-medium bg-primary text-primary-foreground shadow hover:bg-primary/90 transition-all cursor-pointer"
+        >
+          <Icon name="lucide:mail" class="w-4 h-4 mr-2" />
+          Email Us Directly
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

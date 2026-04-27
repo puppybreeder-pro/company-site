@@ -1,0 +1,34 @@
+---
+import { Icon } from 'astro-icon/components';
+import { commitments } from '../../data/ethicalBreedingData';
+---
+
+<section class="section-padding bg-background">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+        Our Professional Breeder Commitment
+      </h2>
+      <p class="text-lg text-muted-foreground">
+        We hold every breeder on our platform to these standards—and we follow through.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-8">
+      {commitments.map((item, index) => (
+        <div class="flex gap-5 p-6 bg-card border border-border rounded-xl shadow-sm">
+          <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <Icon name={item.icon} class="w-6 h-6 text-primary" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-foreground mb-2">
+              <span class="text-primary mr-2">{index + 1}.</span>
+              {item.title}
+            </h3>
+            <p class="text-foreground/80 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

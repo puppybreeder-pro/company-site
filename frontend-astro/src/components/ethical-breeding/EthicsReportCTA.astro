@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="section-padding bg-gradient-to-b from-accent/5 to-background">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
+        <Icon name="lucide:shield-alert" class="w-8 h-8 text-accent" />
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+        See Something? Report It.
+      </h2>
+      <p class="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
+        If you suspect illegal or unethical breeding practices, your report helps
+        protect the welfare of dogs and prevent families from supporting illegal
+        operations. All reports are kept strictly confidential.
+      </p>
+      <a
+        href="/report"
+        class="inline-flex items-center justify-center h-12 rounded-lg px-8 text-base font-medium bg-primary text-primary-foreground shadow hover:bg-primary/90 hover:shadow-lg transition-all group cursor-pointer"
+      >
+        File a Confidential Report
+        <Icon name="lucide:arrow-right" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+      </a>
+    </div>
+  </div>
+</section>

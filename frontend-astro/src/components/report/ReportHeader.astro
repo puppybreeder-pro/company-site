@@ -1,0 +1,17 @@
+---
+import { BRAND_NAME, BRAND_SUFFIX } from '../../constants/index.js';
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="container-custom flex h-16 items-center justify-between">
+    <a href="/" class="flex items-center text-xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer">
+      {BRAND_NAME}<span class="text-primary">{BRAND_SUFFIX}</span>
+    </a>
+    <a
+      href="/"
+      class="inline-flex items-center justify-center h-10 rounded-lg px-6 text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground shadow-sm transition-all cursor-pointer"
+    >
+      Back to Home
+    </a>
+  </div>
+</header>

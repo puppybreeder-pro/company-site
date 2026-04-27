@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+import { codeOfConductItems } from '../../data/reportData';
+---
+
+<section class="section-padding bg-muted/30">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+        Our Code of Conduct
+      </h2>
+      <p class="text-lg text-muted-foreground">
+        Every breeder on PuppyBreeder.PRO must meet these standards. If you believe a breeder is violating them, please file a report below.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      {codeOfConductItems.map((item) => (
+        <div class="p-6 bg-card border border-border rounded-xl shadow-sm">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <Icon name={item.icon} class="w-5 h-5 text-primary" />
+            </div>
+            <h3 class="text-lg font-bold text-foreground">{item.title}</h3>
+          </div>
+          <p class="text-sm text-foreground/80 leading-relaxed">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
