@@ -1,9 +1,8 @@
 export const footerLinks = {
   product: [
-    { label: 'Features', id: 'features' },
-    { label: 'Pricing', id: 'pricing' },
-    { label: 'How It Works', id: 'how-it-works' },
+    { label: 'Dashboard', id: 'features' },
     { label: 'FAQ', id: 'faq' },
+    { label: 'Pricing', id: 'pricing' },
   ],
   support: [
     { label: 'Get Started', id: 'cta' },
