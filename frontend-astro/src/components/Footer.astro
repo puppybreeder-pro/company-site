@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import { footerLinks, breeds } from "../data/footerData";
+import { footerLinks, breeds, socialLinks } from "../data/footerData";
 import { BRAND_NAME, BRAND_SUFFIX } from "../constants";
 ---
 
@@ -105,10 +105,27 @@ import { BRAND_NAME, BRAND_SUFFIX } from "../constants";
         <p class="text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} PuppyBreeder.PRO. All rights reserved.
         </p>
-        <div class="flex items-center gap-2 text-sm text-muted-foreground">
-          <span>Made with</span>
-          <Icon name="lucide:heart" class="w-4 h-4 text-accent fill-accent" />
-          <span>for dog breeders</span>
+        <div class="flex items-center gap-5">
+          <div class="flex items-center gap-2 text-sm text-muted-foreground">
+            <span>Made with</span>
+            <Icon name="lucide:heart" class="w-4 h-4 text-accent fill-accent" />
+            <span>for dog breeders</span>
+          </div>
+          <div class="flex items-center gap-3">
+            {
+              socialLinks.map((link) => (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${link.label}`}
+                  class="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Icon name={link.icon} class="w-5 h-5" />
+                </a>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

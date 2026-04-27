@@ -23,3 +23,11 @@ export const breeds = [
   'Australian Shepherds',
   'Corgis',
 ];
+
+export const socialLinks = [
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61575390987582',
+    icon: 'lucide:facebook',
+  },
+];
