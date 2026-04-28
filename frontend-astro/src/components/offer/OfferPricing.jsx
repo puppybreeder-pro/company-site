@@ -117,15 +117,15 @@ const PlanHeader = ({ pricing, billingCycle }) => (
     </div>
     <div className="mb-3 flex justify-center h-6">
       {billingCycle === 'yearly' ? (
-        <Badge variant="outline" className="text-accent border-accent">
-          Save $198/year
-        </Badge>
+        <p className="text-sm font-medium text-accent">(save $198)</p>
       ) : (
-        <p className="text-muted-foreground">{pricing.note}</p>
+        <p className="text-sm font-medium text-muted-foreground">
+          or $990/year <span className="text-accent">(save $198)</span>
+        </p>
       )}
     </div>
-    <div className="inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 rounded-full px-4 py-2">
-      <span className="text-sm font-medium text-secondary">
+    <div className="inline-flex items-center gap-2 bg-[#FA8072] border border-[#E56F63] rounded-full px-4 py-2 shadow-md">
+      <span className="text-sm font-semibold text-white">
         + ${OFFER_PRICING.setupFee} one-time design & setup fee
       </span>
     </div>

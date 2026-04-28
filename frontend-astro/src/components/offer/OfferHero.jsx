@@ -52,7 +52,7 @@ export const OfferHero = () => {
   const showCursor = phase === "typing" || phase === "deleting";
 
   return (
-    <section className="relative min-h-screen flex items-start lg:items-center overflow-hidden pt-28 md:pt-32">
+    <section className="relative min-h-screen flex items-start overflow-hidden pt-24 md:pt-28 lg:pt-32">
       <div className="absolute inset-0 z-0">
         <img
           src="/images/hero-bg.jpg"
@@ -64,7 +64,7 @@ export const OfferHero = () => {
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="pb-12 lg:pb-0">
+          <div className="pb-12 lg:pb-20">
             <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-2 mb-6 animate-fade-in">
               <Sparkles className="w-4 h-4 text-accent" />
               <span className="text-sm font-medium text-accent">

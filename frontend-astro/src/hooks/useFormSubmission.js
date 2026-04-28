@@ -38,12 +38,21 @@ export const useFormSubmission = (initialValues, successMessage, errorMessage, o
     };
 
     const openPendingUrl = () => {
-      if (!options.openUrlOnSuccess || !pendingTab || pendingTab.closed) return false;
+      if (!options.openUrlOnSuccess) return false;
+
+      if (pendingTab && !pendingTab.closed) {
+        try {
+          pendingTab.location.assign(options.openUrlOnSuccess);
+          return true;
+        } catch {
+          closePendingTab();
+        }
+      }
+
       try {
-        pendingTab.location.assign(options.openUrlOnSuccess);
-        return true;
+        const opened = window.open(options.openUrlOnSuccess, '_blank', 'noopener,noreferrer');
+        return !!opened;
       } catch {
-        closePendingTab();
         return false;
       }
     };
@@ -69,7 +78,6 @@ export const useFormSubmission = (initialValues, successMessage, errorMessage, o
             const direct = new URL(options.openUrlOnSuccess, window.location.href).href;
             description = `${description} · Direct link: ${direct}`;
           }
-          closePendingTab();
           toast.success(successMessage.title, { description });
           setValues({ ...initialValues });
         } else {
@@ -87,7 +95,6 @@ export const useFormSubmission = (initialValues, successMessage, errorMessage, o
           const direct = new URL(options.openUrlOnSuccess, window.location.href).href;
           description = `${description} · Direct link: ${direct}`;
         }
-        closePendingTab();
         toast.success(successMessage.title, { description });
         setValues({ ...initialValues });
       } else {
