@@ -58,7 +58,7 @@ export const OfferPricing = () => {
             </a>
 
             <p className="text-center text-sm text-muted-foreground mt-6">
-              Launch in 48 hours · 15-day money-back guarantee · Cancel anytime
+              Launch in 72 hours · 15-day money-back guarantee · Cancel anytime
             </p>
 
             <CommonQuestions />
@@ -118,7 +118,7 @@ const PlanHeader = ({ pricing, billingCycle }) => (
     <div className="mb-3 flex justify-center h-6">
       {billingCycle === 'yearly' ? (
         <Badge variant="outline" className="text-accent border-accent">
-          Save $189/year
+          Save $198/year
         </Badge>
       ) : (
         <p className="text-muted-foreground">{pricing.note}</p>
@@ -126,7 +126,7 @@ const PlanHeader = ({ pricing, billingCycle }) => (
     </div>
     <div className="inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 rounded-full px-4 py-2">
       <span className="text-sm font-medium text-secondary">
-        + ${OFFER_PRICING.setupFee} one-time design &amp; setup fee
+        + ${OFFER_PRICING.setupFee} one-time design & setup fee
       </span>
     </div>
   </div>

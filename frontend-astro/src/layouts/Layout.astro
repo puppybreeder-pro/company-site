@@ -2,10 +2,11 @@
 import '../styles/global.css';
 import { Toaster } from '../ui/sonner';
 import { faqData } from '../data/faqData';
+import { BRAND_EMAIL } from '../constants';
 
 const {
   title = 'PuppyBreeder.PRO — Professional Websites for Dog Breeders',
-  description = 'Professional websites for dog breeders — launched in 48 hours, fully managed, purpose-built for your breeding program.',
+  description = 'Professional websites for dog breeders — launched in 72 hours, fully managed, purpose-built for your breeding program.',
   ogImage = new URL('/images/og-default.jpg', 'https://www.puppybreeder.pro').href,
   includeFaqSchema = true,
   includeOfferSchema = true,
@@ -37,7 +38,7 @@ const localBusinessSchema = {
   logo: 'https://www.puppybreeder.pro/favicon.svg',
   priceRange: '$$',
   telephone: '+1-555-000-0000',
-  email: 'steven@puppybreeder.pro',
+  email: BRAND_EMAIL,
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'US',
@@ -50,7 +51,7 @@ const defaultOfferSchema = includeOfferSchema ? {
   '@type': 'Offer',
   name: 'Gold Standard Plan',
   description: 'Fully hosted, branded website for dog breeders with custom design, admin dashboard, puppy listings, and managed hosting.',
-  url: 'https://www.puppybreeder.pro/offer#pricing',
+  url: 'https://www.puppybreeder.pro/#pricing',
   priceCurrency: 'USD',
   price: '99.00',
   priceValidUntil: '2027-12-31',

@@ -1,7 +1,7 @@
 export const offerFaqData = [
   {
     question: 'How long does it take to launch my site?',
-    answer: 'Most sites launch within 48 hours of our initial call. We handle all the technical setup while you focus on providing content about your breeding program.',
+    answer: 'Most sites launch within 72 hours of our initial call. We handle all the technical setup while you focus on providing content about your breeding program.',
   },
   {
     question: 'Do I need technical skills to manage my site?',

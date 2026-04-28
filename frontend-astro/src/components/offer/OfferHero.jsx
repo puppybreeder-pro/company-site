@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { CountUp } from "../CountUp";
 import { CALENDLY_URL } from "../../constants";
 
-const PLATFORMS = ["Squarespace", "Wix", "Godaddy", "Wordpress"];
+const PLATFORMS = ["Squarespace", "Wix", "GoDaddy", "Wordpress"];
 const TYPING_MS = 90;
 const DELETING_MS = 45;
 const PAUSE_TYPED_MS = 4200;

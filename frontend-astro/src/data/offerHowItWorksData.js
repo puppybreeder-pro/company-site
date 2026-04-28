@@ -8,7 +8,7 @@ export const steps = [
   {
     number: '02',
     title: 'We Build Your Site',
-    description: "We design and launch your breed-specific website — usually within 48 hours. You provide the content; we handle everything else.",
+    description: "We design and launch your breed-specific website — usually within 72 hours. You provide the content; we handle everything else.",
     icon: '🛠️',
   },
   {

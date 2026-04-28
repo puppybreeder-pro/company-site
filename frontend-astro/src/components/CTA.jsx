@@ -4,7 +4,7 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { Card } from '../ui/card';
 import { Calendar, Mail, ArrowRight, Phone } from 'lucide-react';
-import { CALENDLY_URL } from '../constants';
+import { CALENDLY_URL, BRAND_EMAIL } from '../constants';
 import { useFormSubmission } from '../hooks/useFormSubmission';
 
 const CONTACT_INITIAL = { name: '', email: '', phone: '', breed: '', message: '', botcheck: '' };
@@ -111,7 +111,7 @@ export const CTA = () => {
                   </li>
                   <li className="flex gap-2">
                     <span className="text-primary font-bold">3.</span>
-                    <span>We build your site—usually live within 48 hours</span>
+                    <span>We build your site—usually live within 72 hours</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-primary font-bold">4.</span>
@@ -125,8 +125,8 @@ export const CTA = () => {
                   <span className="font-semibold text-foreground">Have questions first?</span>
                   <br />
                   Email me directly at{' '}
-                  <a href="mailto:steven@puppybreeder.pro" className="text-primary hover:underline">
-                    steven@puppybreeder.pro
+                  <a href={`mailto:${BRAND_EMAIL}`} className="text-primary hover:underline">
+                    {BRAND_EMAIL}
                   </a>
                 </p>
               </Card>

@@ -61,7 +61,7 @@ export const Pricing = () => {
             </Button>
 
             <p className="text-center text-sm text-muted-foreground mt-6">
-              Launch in 48 hours · Cancel anytime
+              Launch in 72 hours · Cancel anytime
             </p>
 
             <CommonQuestions />
@@ -117,7 +117,7 @@ const PlanHeader = ({ pricing, billingCycle }) => (
     <div className="mb-3 flex justify-center h-6">
       {billingCycle === 'yearly' ? (
         <Badge variant="outline" className="text-accent border-accent" data-testid="save-two-months-badge">
-          Save 2 months
+          Save $198/year
         </Badge>
       ) : (
         <p className="text-muted-foreground">{pricing.note}</p>
