@@ -31,7 +31,7 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1667386452776-b46d4bc435e7"
+          src="/images/hero-bg.jpg"
           alt="Professional dog breeder with dogs"
           className="w-full h-full object-cover"
         />
