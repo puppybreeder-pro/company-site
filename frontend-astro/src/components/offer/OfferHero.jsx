@@ -91,7 +91,7 @@ export const OfferHero = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in-up max-w-xl">
-              Gah. You shouldn't need a web developer to add a puppy photo.
+              Grrr. You shouldn't need a web developer to add a puppy photo.
               Every week without a professional site is another week families
               can't find you. With{" "}
               <span className="text-primary font-semibold">
