@@ -54,6 +54,19 @@ export const adminFeatures = [
 
 export const dashboardSlides = [
   {
+    title: "Home Page",
+    description:
+      "Beautiful homepage with your logo, navigation, and call to action",
+    image: "/images/homepage-nav.png",
+  },
+  {
+    title: "Your Story",
+    description:
+      "A compelling About Us page that builds trust, shares your breeding program, values, story, and connects families to your mission.",
+
+    image: "/images/about-story.png",
+  },
+  {
     title: "Admin Dashboard",
     description:
       "Complete overview of your breeding operation—puppies, applications, and analytics at a glance",
