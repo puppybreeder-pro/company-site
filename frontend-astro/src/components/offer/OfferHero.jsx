@@ -116,11 +116,12 @@ export const OfferHero = () => {
 
             <div className="mt-12 pt-8 border-t border-border/50 animate-fade-in">
               <p className="text-sm text-muted-foreground mb-4">
-                Trusted by professional breeders
+                Trusted by professional breeders — 15-day risk-free trial, no
+                lock-in contracts
               </p>
               <div className="flex flex-wrap items-center gap-6">
-                <TrustStat end={48} suffix="hrs" label="Average Launch" />
-                <TrustStat end={28} suffix="+" label="Breed Designs" />
+                <TrustStat end={72} suffix="hrs" label="Average Launch" />
+                <TrustStat end={28} suffix="+" label="Custom Breed Designs" />
                 <TrustStat end={100} suffix="%" label="Managed Hosting" />
               </div>
             </div>

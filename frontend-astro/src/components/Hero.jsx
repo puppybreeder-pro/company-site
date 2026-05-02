@@ -126,9 +126,21 @@ export const Hero = () => {
                 Trusted by professional breeders
               </p>
               <div className="flex flex-wrap items-center gap-6">
-                <TrustStat end={parseInt(TRUST_SIGNALS.launchTime)} suffix="hrs" label="Average Launch" />
-                <TrustStat end={parseInt(TRUST_SIGNALS.breedDesigns)} suffix="+" label="Breed Designs" />
-                <TrustStat end={parseInt(TRUST_SIGNALS.hosting)} suffix="%" label="Managed Hosting" />
+                <TrustStat
+                  end={parseInt(TRUST_SIGNALS.launchTime)}
+                  suffix="hrs"
+                  label="Average Launch"
+                />
+                <TrustStat
+                  end={parseInt(TRUST_SIGNALS.breedDesigns)}
+                  suffix="+"
+                  label="Custom Breed Designs"
+                />
+                <TrustStat
+                  end={parseInt(TRUST_SIGNALS.hosting)}
+                  suffix="%"
+                  label="Managed Hosting"
+                />
               </div>
             </div>
           </div>

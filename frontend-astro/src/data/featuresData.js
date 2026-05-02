@@ -56,7 +56,7 @@ export const dashboardSlides = [
   {
     title: "Home Page",
     description:
-      "Beautiful homepage with your logo, navigation, and call to action",
+      "Beautiful homepage with your logo, branding, navigation, and call to action",
     image: "/images/homepage-nav.png",
   },
   {
@@ -83,5 +83,14 @@ export const dashboardSlides = [
     description:
       "Simple lead qualification—structured questions help you identify serious buyers and save time on calls",
     image: "/images/intake-applications-admin.png",
+  },
+  {
+    title: "Built for speed & accessibility",
+    description:
+      "Real-world Google PageSpeed scores from a live breeder site: 98 performance, 100 accessibility, and strong SEO—so pages feel instant and work for every visitor.",
+    image: "/images/page-speed-score.png",
+    imageAlt:
+      "Google PageSpeed Insights report showing 98 performance, 100 accessibility, and 92 SEO for a breeder website.",
+    imageInsetClipPx: 1,
   },
 ];
