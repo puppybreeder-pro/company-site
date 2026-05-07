@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/book-a-free-call",
+      "destination": "https://calendly.com/betsyolsen/pb-p-client-care-call",
+      "permanent": false
+    }
+  ]
+}
