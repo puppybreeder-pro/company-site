@@ -16,6 +16,11 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://www.puppybreeder.pro')
 
 const siteName = 'PuppyBreeder.PRO';
 
+const gaMeasurementId =
+  typeof import.meta.env.PUBLIC_GA_MEASUREMENT_ID === 'string'
+    ? import.meta.env.PUBLIC_GA_MEASUREMENT_ID.trim()
+    : '';
+
 const faqSchema = includeFaqSchema ? {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -93,6 +98,20 @@ const defaultOfferSchema = includeOfferSchema ? {
     {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
     {defaultOfferSchema && <script type="application/ld+json" set:html={JSON.stringify(defaultOfferSchema)} />}
+
+    {gaMeasurementId && (
+      <>
+        <script type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
+        <script type="text/partytown" is:inline define:vars={{ gaMeasurementId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', gaMeasurementId);
+        </script>
+      </>
+    )}
 
     <title>{title}</title>
   </head>

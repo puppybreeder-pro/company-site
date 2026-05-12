@@ -10,6 +10,7 @@
     "build:leadmagnet-pdf": "node ./scripts/build-lead-magnet-pdf.mjs"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.1.7",
     "@astrojs/react": "^4.2.4",
     "@astrojs/sitemap": "^3.7.2",
     "@iconify-json/lucide": "^1.2.34",
