@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import CookieBanner from '../components/CookieBanner.astro';
 import { Toaster } from '../ui/sonner';
 import { faqData } from '../data/faqData';
 import { BRAND_EMAIL } from '../constants';
@@ -117,6 +118,7 @@ const defaultOfferSchema = includeOfferSchema ? {
   </head>
   <body class="bg-background text-foreground" data-no-transitions>
     <slot />
+    <CookieBanner />
     <Toaster client:load theme="light" />
 
     <script>
