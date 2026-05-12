@@ -7,6 +7,7 @@ export const footerLinks = {
   support: [
     { label: 'Get Started', id: 'cta' },
     { label: 'Contact Us', id: 'cta' },
+    { label: 'Terms of Service', href: '/terms' },
     { label: 'Ethics Policy', href: '/ethical-breeding' },
     { label: 'Report a Breeder', href: '/report' },
   ],
