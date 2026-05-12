@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PrivacyHeader from '../components/privacy/PrivacyHeader.astro';
+import PrivacyHero from '../components/privacy/PrivacyHero.astro';
+import PrivacyContent from '../components/privacy/PrivacyContent.astro';
+import Footer from '../components/Footer.astro';
+
+const privacyTitle = 'Privacy Policy — PuppyBreeder.PRO';
+const privacyDescription =
+  'Privacy Policy for PuppyBreeder.PRO: PIPEDA and Canadian privacy practices, US state disclosures including California (CCPA/CPRA), and how we handle personal information.';
+---
+
+<Layout
+  title={privacyTitle}
+  description={privacyDescription}
+  includeFaqSchema={false}
+  includeOfferSchema={false}
+>
+  <PrivacyHeader />
+  <main>
+    <PrivacyHero />
+    <div data-reveal>
+      <PrivacyContent />
+    </div>
+  </main>
+  <Footer />
+</Layout>

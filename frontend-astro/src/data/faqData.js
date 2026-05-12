@@ -1,7 +1,7 @@
 export const faqData = [
   {
     question: 'How long does it take to launch my site?',
-    answer: 'Most sites launch within 48 hours of our initial call. We handle all the technical setup while you focus on providing content about your breeding program.',
+    answer: 'Most sites launch within 72 hours of our initial call. We handle all the technical setup while you focus on providing content about your breeding program.',
   },
   {
     question: 'Do I need technical skills to manage my site?',
@@ -25,7 +25,7 @@ export const faqData = [
   },
   {
     question: 'Can I cancel anytime?',
-    answer: "Yes! We offer a 15-day 100% satisfaction guarantee—if you're not happy, you get your money back, no questions asked. After the 15-day period, you can cancel anytime (no long-term contracts), but there are no refunds for the current billing period.",
+    answer: "Yes! We offer a 15-day 100% satisfaction guarantee — if you're not happy, you get your money back during the trial period. After the 15-day period, you can cancel anytime with no long-term contract, but fees are non-refundable for the current billing period unless applicable law requires otherwise.",
   },
   {
     question: 'How do I add new puppies or update listings?',

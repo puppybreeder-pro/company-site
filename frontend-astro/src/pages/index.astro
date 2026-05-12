@@ -15,7 +15,9 @@ import Footer from '../components/Footer.astro';
 import { offerFaqData } from '../data/offerFaqData';
 
 const homeTitle = 'PuppyBreeder.PRO — Professional Websites for Dog Breeders';
-const homeDescription = 'Stop fighting with website builders. Get a professionally managed breeding website launched in 48 hours — with everything included for one transparent price.';
+const homeDescription = 'Stop fighting with website builders. Get a professionally managed breeding website launched in 72 hours — with everything included for one transparent price.';
+
+const siteOrigin = 'https://www.puppybreeder.pro';
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -25,7 +27,7 @@ const faqSchema = {
     name: faq.question,
     acceptedAnswer: {
       '@type': 'Answer',
-      text: faq.answer,
+      text: faq.moreLink ? `${faq.answer} More: ${siteOrigin}${faq.moreLink.href}` : faq.answer,
     },
   })),
 };
@@ -53,8 +55,8 @@ const offerSchema = {
   includeFaqSchema={false}
   includeOfferSchema={false}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-  <script type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(offerSchema)} />
 
   <Header client:load />
   <main>
@@ -63,22 +65,22 @@ const offerSchema = {
       <OfferEmpathy />
     </div>
     <div data-reveal>
+      <FounderSection />
+    </div>
+    <div data-reveal>
       <OfferOutcomes />
     </div>
     <div data-reveal>
       <OfferHowItWorks />
     </div>
     <div data-reveal>
-      <FounderSection />
+      <Testimonials />
     </div>
     <div data-reveal>
       <OfferLeadMagnet client:visible />
     </div>
     <div data-reveal>
       <OfferPricing client:load />
-    </div>
-    <div data-reveal>
-      <Testimonials />
     </div>
     <div data-reveal>
       <OfferFAQ client:visible />

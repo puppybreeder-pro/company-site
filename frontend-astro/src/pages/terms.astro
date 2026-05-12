@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TermsHeader from '../components/terms/TermsHeader.astro';
+import TermsHero from '../components/terms/TermsHero.astro';
+import TermsContent from '../components/terms/TermsContent.astro';
+import Footer from '../components/Footer.astro';
+
+const termsTitle = 'Terms of Service — PuppyBreeder.PRO';
+const termsDescription =
+  'Terms of Service for PuppyBreeder.PRO websites and digital services. Governing law: Alberta, Canada. International and digital delivery terms explained.';
+---
+
+<Layout
+  title={termsTitle}
+  description={termsDescription}
+  includeFaqSchema={false}
+  includeOfferSchema={false}
+>
+  <TermsHeader />
+  <main>
+    <TermsHero />
+    <div data-reveal>
+      <TermsContent />
+    </div>
+  </main>
+  <Footer />
+</Layout>

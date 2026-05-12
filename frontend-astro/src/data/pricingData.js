@@ -1,43 +1,42 @@
 export const PRICING = {
   monthly: {
-    price: 79,
+    price: 99,
     period: 'month',
-    displayPrice: '$79',
-    note: 'or $790/year (save 2 months)',
+    displayPrice: '$99',
+    note: 'or $990/year (save $198)',
   },
   yearly: {
-    price: 790,
+    price: 990,
     period: 'year',
-    displayPrice: '$790',
-    note: 'equals $65.83/month',
+    displayPrice: '$990',
+    note: 'equals $82.50/month',
   },
-  setupFee: 150,
+  setupFee: 349,
 };
 
 export const planFeatures = [
-  'Hosted, branded website with custom design',
-  'Intuitive admin dashboard',
-  'Puppy listings with status management',
-  'Parent dog profiles with pedigrees',
-  'Online adoption applications & contact forms',
-  'AI-powered puppy descriptions',
-  'Photo galleries with cloud storage & compression',
+  'Hosted, branded website with breed-specific design',
+  'Intuitive admin dashboard — update puppies in minutes',
+  'Puppy listings with one-click status management',
+  'Parent dog profiles with pedigrees & health clearances',
+  'Pre-qualified adoption applications',
+  'AI-powered puppy descriptions — one click, written for you',
+  'Photo galleries with one-click upload & cloud storage',
   'YouTube video embeds',
-  'Health certification displays',
+  'Health certification displays, front and center',
   'Testimonial system',
   'Breeder-specific FAQ section',
   'Mobile-responsive design',
   'SSL certificate & domain migration',
   'Fully managed hosting',
+  'Calendly scheduling integration — included',
+  'Google Analytics with breed tracking — included',
+  'Printable online contracts — included',
   '1 free design change per month',
   'Email support',
 ];
 
-export const addOns = [
-  { name: 'Calendly Scheduling Integration', price: '+$10/mo' },
-  { name: 'Google Analytics with Breed Tracking', price: '+$15/mo' },
-  { name: 'Printable Online Contracts', price: '+$15/mo' },
-];
+export const addOns = [];
 
 export const pricingComparison = [
   {
@@ -54,8 +53,8 @@ export const pricingComparison = [
   },
   {
     name: 'PuppyBreeder.PRO',
-    monthly: { price: '$79/mo', note: '+ $150 setup • fully managed' },
-    yearly: { price: '$790/yr', note: '+ $150 setup • fully managed' },
+    monthly: { price: '$99/mo', note: '+ $349 setup • fully managed' },
+    yearly: { price: '$990/yr', note: '+ $349 setup • fully managed' },
     highlighted: true,
   },
 ];

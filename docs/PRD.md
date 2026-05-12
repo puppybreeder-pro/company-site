@@ -1,7 +1,7 @@
 # PuppyBreeder.PRO — Product Requirements
 
 ## Original Problem Statement
-Landing page for "PuppyBreeder.PRO", a SaaS website company for dog breeders. Must be professional, trustworthy, simple for non-tech-savvy users. Needs Hero, Problem/Solution, Features (Command Center dashboard previews), Benefits (For Breeders/Families), Pricing ($79/mo or $790/yr, $150 setup fee), and FAQs.
+Landing page for "PuppyBreeder.PRO", a SaaS website company for dog breeders. Must be professional, trustworthy, simple for non-tech-savvy users. Needs Hero, Problem/Solution, Features (Command Center dashboard previews), Benefits (For Breeders/Families), Pricing ($99/mo or $990/yr, $349 setup fee), and FAQs.
 
 ## Current Architecture
 - **Frontend**: React + Tailwind CSS + Shadcn UI
@@ -15,7 +15,7 @@ Landing page for "PuppyBreeder.PRO", a SaaS website company for dog breeders. Mu
 | Primary (brand) | Blueviolet `#5E3AE3` | Logo, `.PRO`, primary CTAs, "Professional Website", nav, toggles, pricing card border, add-on prices |
 | Secondary | Slateblue `#7870E8` | Gradient partner |
 | Success (trust) | Darkseagreen `#6DA366` | All checkmarks (Problem/Solution, Benefits, Pricing), "What Families See" feature icons |
-| Accent (reserved) | Salmon `#FC7C7C` | Hero pill, Pricing "Simple Pricing" badge + `$79` anchor, Footer heart, Testimonial stars |
+| Accent (reserved) | Salmon `#FC7C7C` | Hero pill, Pricing "Simple Pricing" badge + `$99` anchor, Footer heart, Testimonial stars |
 | Pastel Purple | Thistle `#DBC5EF` | "For You (Breeders)" benefits tab |
 | Pastel Salmon | Blush | "For Them (Families)" benefits tab |
 | Neutrals | ghostwhite, whitesmoke, dimgray, ink | Backgrounds + body copy |
@@ -60,7 +60,7 @@ Landing page for "PuppyBreeder.PRO", a SaaS website company for dog breeders. Mu
 - Replace Founder section placeholder with actual photo (user asset)
 - Wire "Schedule Demo Call" button (Calendly or mailto)
 - Add live breeder site visual mockups/examples section
-- Stripe checkout for $79/$790 plans
+- Stripe checkout for $99/$990 plans
 - Newsletter / lead-magnet signup
 - Real testimonials carousel + customer logo strip
 

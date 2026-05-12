@@ -8,8 +8,8 @@ export const testimonials = [
       "My PuppyBreeder.PRO website has been a total game-changer. The site is a slick showcase that really highlights the quality of my pups and my breeding program. In just two weeks, qualified applications jumped 60%. Families compliment it constantly. Best part? I'm spending way less time wrestling with listings, endless DM threads, and way more time doing what I love — raising amazing dogs. Honestly, the best decision I've made for my breeding business.",
   },
   {
-    author: "Betsy Olsen",
-    location: "Website User",
+    author: "Betsy",
+    location: "Website Admin",
     image: "/images/betsy-1.jpg",
     rating: 5,
     content:

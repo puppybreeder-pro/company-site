@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon/components';
+import { BRAND_EMAIL } from '../../constants/index.js';
+---
+
+<section class="pt-20 pb-10 md:pt-28 md:pb-14 bg-gradient-to-b from-primary/5 to-background border-b border-border/60">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
+        <Icon name="lucide:book-open" class="w-8 h-8 text-primary" aria-hidden="true" />
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-bold text-foreground mb-5 leading-tight">
+        Dog Breeder Websites &amp; Buyer Trust
+      </h1>
+      <p class="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+        What research and real breeder projects suggest about photos, listings, and
+        credibility online — and how PuppyBreeder.PRO is built around those realities.
+      </p>
+      <p class="mt-5 text-sm text-muted-foreground max-w-2xl mx-auto">
+        Questions?{' '}
+        <a
+          href={`mailto:${BRAND_EMAIL}`}
+          class="text-primary font-medium underline underline-offset-2 hover:text-primary/80"
+        >
+          {BRAND_EMAIL}
+        </a>
+      </p>
+      <p class="mt-6 text-sm text-muted-foreground">
+        <span class="font-medium text-foreground">Last updated:</span> May 12, 2026
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,11 +1,13 @@
 ---
 import '../styles/global.css';
+import CookieBanner from '../components/CookieBanner.astro';
 import { Toaster } from '../ui/sonner';
 import { faqData } from '../data/faqData';
+import { BRAND_EMAIL } from '../constants';
 
 const {
   title = 'PuppyBreeder.PRO — Professional Websites for Dog Breeders',
-  description = 'Professional websites for dog breeders — launched in 48 hours, fully managed, purpose-built for your breeding program.',
+  description = 'Professional websites for dog breeders — launched in 72 hours, fully managed, purpose-built for your breeding program.',
   ogImage = new URL('/images/og-default.jpg', 'https://www.puppybreeder.pro').href,
   includeFaqSchema = true,
   includeOfferSchema = true,
@@ -14,6 +16,11 @@ const {
 const canonicalURL = new URL(Astro.url.pathname, 'https://www.puppybreeder.pro');
 
 const siteName = 'PuppyBreeder.PRO';
+
+const gaMeasurementId =
+  typeof import.meta.env.PUBLIC_GA_MEASUREMENT_ID === 'string'
+    ? import.meta.env.PUBLIC_GA_MEASUREMENT_ID.trim()
+    : '';
 
 const faqSchema = includeFaqSchema ? {
   '@context': 'https://schema.org',
@@ -37,7 +44,7 @@ const localBusinessSchema = {
   logo: 'https://www.puppybreeder.pro/favicon.svg',
   priceRange: '$$',
   telephone: '+1-555-000-0000',
-  email: 'steven@puppybreeder.pro',
+  email: BRAND_EMAIL,
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'US',
@@ -50,7 +57,7 @@ const defaultOfferSchema = includeOfferSchema ? {
   '@type': 'Offer',
   name: 'Gold Standard Plan',
   description: 'Fully hosted, branded website for dog breeders with custom design, admin dashboard, puppy listings, and managed hosting.',
-  url: 'https://www.puppybreeder.pro/offer#pricing',
+  url: 'https://www.puppybreeder.pro/#pricing',
   priceCurrency: 'USD',
   price: '99.00',
   priceValidUntil: '2027-12-31',
@@ -73,9 +80,6 @@ const defaultOfferSchema = includeOfferSchema ? {
 
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL.href} />
@@ -89,14 +93,29 @@ const defaultOfferSchema = includeOfferSchema ? {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
-    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
-    {defaultOfferSchema && <script type="application/ld+json" set:html={JSON.stringify(defaultOfferSchema)} />}
+    {faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    {defaultOfferSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(defaultOfferSchema)} />}
+
+    {gaMeasurementId && (
+      <>
+        <script is:inline type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
+        <script type="text/partytown" is:inline define:vars={{ gaMeasurementId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', gaMeasurementId);
+        </script>
+      </>
+    )}
 
     <title>{title}</title>
   </head>
   <body class="bg-background text-foreground" data-no-transitions>
     <slot />
+    <CookieBanner />
     <Toaster client:load theme="light" />
 
     <script>

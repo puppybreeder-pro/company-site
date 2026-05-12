@@ -168,12 +168,12 @@ Replace with **"You've probably tried…"** language that shows empathy before o
 The pricing comparison table (DIY Builder vs. Custom Developer vs. PuppyBreeder.PRO) reads as defensive. You're arguing against alternatives before the breeder has raised the objection. When the outcome is clear (Improvement 2), the price justifies itself.
 
 ### Current
-- Three-column comparison card showing DIY ($30-50/mo + your time), Custom Dev ($3,000-8,000), and PuppyBreeder.PRO ($79/mo)
+- Three-column comparison card showing DIY ($30-50/mo + your time), Custom Dev ($3,000-8,000), and PuppyBreeder.PRO ($99/mo)
 - The "your time" and "can't update yourself" notes argue against alternatives
 
 ### Proposed options (pick one):
 1. **Remove entirely** — let the features/outcomes and the price speak for themselves
-2. **Replace with a single "What you're really paying for" line** — e.g., "$79/mo. That's less than one puppy's worth of kibble, and it gets you your weekends back."
+2. **Replace with a single "What you're really paying for" line** — e.g., "$99/mo. That's less than one puppy's worth of kibble, and it gets you your weekends back."
 3. **Keep but reframe** — instead of comparing costs, compare *outcomes*: "DIY builders give you tools. We give you a finished site you never have to think about."
 
 ### Implementation
@@ -226,7 +226,7 @@ Proposed: "Every week without a professional site is another week families can't
 - **"What Happens Next" list**: Outcome-oriented, not process-oriented:
   1. "We'll learn about your breeding program and what matters most to you"
   2. "Together we'll plan a site that families can find and trust"
-  3. "Your site goes live — usually within 48 hours"
+  3. "Your site goes live — usually within 72 hours"
   4. "Quick training, then you're in control — no developer needed"
 
 ### Implementation
@@ -252,7 +252,7 @@ Proposed: "Every week without a professional site is another week families can't
 ## Improvement 9: Price to Match the Value — Stop Whispering
 
 ### Why
-This is the ultimate expression of Anti-Pattern #2 (selling features instead of outcomes) applied to pricing. The price is part of the story the site tells, and right now it says "this is a budget tool" when the value says "this is a professional service." $79/mo signals Squarespace — a template you manage yourself. What we deliver is closer to what Julie Swan charges $4,950–$12,500 for (custom design, copy assistance, training, ongoing support). We do it faster and cheaper because of our platform, but the *price* doesn't reflect that.
+This is the ultimate expression of Anti-Pattern #2 (selling features instead of outcomes) applied to pricing. The price is part of the story the site tells, and right now it says "this is a budget tool" when the value says "this is a professional service." $99/mo signals Squarespace — a template you manage yourself. What we deliver is closer to what Julie Swan charges $4,950–$12,500 for (custom design, copy assistance, training, ongoing support). We do it faster and cheaper because of our platform, but the *price* doesn't reflect that.
 
 When you price below your value, two things happen:
 1. **Serious breeders question whether it's "real"** — they've seen cheap website builders. They've been burned. A low price doesn't signal "great deal," it signals "probably not for me."
@@ -262,19 +262,19 @@ When you price below your value, two things happen:
 
 | Problem | Why It Matters |
 |---|---|
-| **$79/mo is too low for the value** | Signals "template builder" not "professional managed service." A competitor charges $5K+ for the same outcome, slower. We're dramatically better — the price should reflect that. |
+| **$99/mo is too low for the value** | Signals "template builder" not "professional managed service." A competitor charges $5K+ for the same outcome, slower. We're dramatically better — the price should reflect that. |
 | **$150 setup fee barely covers a half hour** | This is where the personal touch happens — the call, the breed-specific setup, the training. Pricing it at $150 says "this part isn't valuable." It is. |
 | **Add-ons at $10–$15/mo feel like nickel-and-diming** | Calendly integration for $10/mo? Google Analytics for $15/mo? These feel like afterthoughts tacked on. Either include them (stronger value story: "everything included") or price them at $25–$29/mo so they feel worth opting into. Cheap à la carte prices erode the perceived value of the main plan. |
 | **Printable contracts at $15/mo** is oddly specific | Too niche as a standalone add-on. Either include it or remove it — it's distracting and makes the plan feel incomplete. |
-| **Annual savings feel small** | "Save 2 months" on $79/mo = ~$158/yr. Not compelling enough to drive annual commitment. |
+| **Annual savings feel small** | "Save 2 months" on $99/mo = ~$198/yr. Not compelling enough to drive annual commitment. |
 
 ### Proposed pricing
 
 | Item | Current | Proposed | Why |
 |---|---|---|---|
-| Monthly | $79/mo | $99–$119/mo | Still approachable, but signals "this is serious." Not Squarespace territory. |
-| Setup fee | $150 | $249–$349 | Reflects the personal call, breed-specific setup, and training. This is the most valuable part — price it like it matters. |
-| Annual | $790/yr (save ~$158) | $999/yr (save ~$200–$429 depending on monthly) | Bigger dollar savings, cleaner number, stronger commitment incentive. |
+| Monthly | $79/mo | $99/mo | Still approachable, but signals "this is serious." Not Squarespace territory. |
+| Setup fee | $150 | $349 | Reflects the personal call, breed-specific setup, and training. This is the most valuable part — price it like it matters. |
+| Annual | $790/yr (save ~$158) | $990/yr (save ~$198) | Bigger dollar savings, cleaner number, stronger commitment incentive. |
 | Calendly integration | +$10/mo | Include in plan, **or** +$25/mo | If included: "Everything you need." If à la carte: feels intentional, not cheap. |
 | Google Analytics | +$15/mo | Include in plan, **or** +$29/mo | Same reasoning. |
 | Printable contracts | +$15/mo | Include in plan, **or** remove | Too niche to be a standalone line item. |

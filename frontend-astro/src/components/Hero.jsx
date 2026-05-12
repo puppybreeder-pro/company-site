@@ -28,23 +28,27 @@ export const Hero = () => {
   );
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-start overflow-hidden pt-24 md:pt-28 lg:pt-32">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1667386452776-b46d4bc435e7"
+          src="/images/hero-bg.jpg"
           alt="Professional dog breeder with dogs"
+          width={1200}
+          height={1310}
+          decoding="async"
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
+        <div className="absolute inset-0 bg-linear-to-r from-background/95 via-background/85 to-background/60" />
       </div>
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="pt-20 pb-12 lg:pt-0 lg:pb-0">
+          <div className="pb-12 lg:pb-20">
             <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-2 mb-6 animate-fade-in">
               <Sparkles className="w-4 h-4 text-accent" />
               <span className="text-sm font-medium text-accent">
-                Websites built exclusively for dog breeders
+                <b>Websites</b> built exclusively for dog breeders
               </span>
             </div>
 
@@ -126,9 +130,21 @@ export const Hero = () => {
                 Trusted by professional breeders
               </p>
               <div className="flex flex-wrap items-center gap-6">
-                <TrustStat end={48} suffix="hrs" label="Average Launch" />
-                <TrustStat end={28} suffix="+" label="Breed Designs" />
-                <TrustStat end={100} suffix="%" label="Managed Hosting" />
+                <TrustStat
+                  end={parseInt(TRUST_SIGNALS.launchTime)}
+                  suffix="hrs"
+                  label="Average Launch"
+                />
+                <TrustStat
+                  end={parseInt(TRUST_SIGNALS.breedDesigns)}
+                  suffix="+"
+                  label="Custom Breed Designs"
+                />
+                <TrustStat
+                  end={parseInt(TRUST_SIGNALS.hosting)}
+                  suffix="%"
+                  label="Managed Hosting"
+                />
               </div>
             </div>
           </div>

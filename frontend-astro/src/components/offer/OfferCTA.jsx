@@ -1,12 +1,12 @@
 import { Calendar, ArrowRight } from "lucide-react";
 import { Button } from "../../ui/button";
 import { Card } from "../../ui/card";
-import { CALENDLY_URL } from "../../constants";
+import { CALENDLY_URL, BRAND_EMAIL } from "../../constants";
 
 const nextSteps = [
   "We'll learn about your breeding program and what matters most to you",
   "Together we'll plan a site that families can find and trust",
-  "Your site goes live — usually within 48 hours",
+  "Your site goes live — usually within 72 hours",
   "Quick training, then you're in control — no developer needed",
 ];
 
@@ -68,10 +68,10 @@ export const OfferCTA = () => {
             <br />
             Email me directly at{" "}
             <a
-              href="mailto:steven+hello@puppybreeder.pro"
+              href={`mailto:${BRAND_EMAIL}`}
               className="text-primary hover:underline"
             >
-              steven+hello@puppybreeder.pro
+              {BRAND_EMAIL}
             </a>
           </p>
         </div>

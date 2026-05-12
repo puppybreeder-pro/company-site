@@ -1,22 +1,15 @@
-export const BRAND_NAME = 'PuppyBreeder';
-export const BRAND_SUFFIX = '.PRO';
-export const BRAND_EMAIL = 'steven@puppybreeder.pro';
-export const REPORT_EMAIL = 'report@puppybreeder.pro';
+export const BRAND_NAME = "PuppyBreeder";
+export const BRAND_SUFFIX = ".PRO";
+export const COMPANY_LEGAL_NAME = "14463188 Canada Inc.";
+export const BRAND_EMAIL = "steven+hello@puppybreeder.pro";
+export const TERMS_EMAIL = "terms@puppybreeder.pro";
+export const PRIVACY_EMAIL = "privacy@puppybreeder.pro";
+export const REPORT_EMAIL = "report@puppybreeder.pro";
 
-export const CALENDLY_URL = 'https://api.puppybreedr.pro/book-a-free-call';
+export const CALENDLY_URL = "https://puppybreeder.pro/book-a-free-call";
 
 export const TRUST_SIGNALS = {
-  launchTime: '48hrs',
-  breedDesigns: '28+',
-  hosting: '100%',
+  launchTime: "72hrs",
+  breedDesigns: "28+",
+  hosting: "100%",
 };
-
-export const CONTACT_INFO = {
-  founderName: 'Steven Olsen',
-  founderTitle: 'Founder',
-  email: BRAND_EMAIL,
-};
-
-export const SCROLL_THRESHOLD = 20;
-export const LAUNCH_TIME_HOURS = 48;
-export const GUARANTEE_DAYS = 15;

@@ -36,7 +36,7 @@ export const adminOutcomes = [
     icon: "image",
     title: "One-Click Uploads",
     description:
-      "One click to upload. No resizing, no compression tools, no uploading to three different platforms. Done.",
+      "One click to add new puppy photos. No resizing, no compression tools, no uploading to three different platforms. Done.",
   },
   {
     icon: "shield",
@@ -52,4 +52,4 @@ export const adminOutcomes = [
   },
 ];
 
-export { dashboardSlides } from './featuresData';
+export { dashboardSlides } from "./featuresData";

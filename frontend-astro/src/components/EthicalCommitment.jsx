@@ -1,6 +1,7 @@
 import { Card } from '../ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 import { ShieldCheck } from 'lucide-react';
+import { REPORT_EMAIL } from '../constants';
 
 export const EthicalCommitment = () => {
   return (
@@ -76,11 +77,11 @@ export const EthicalCommitment = () => {
                     illegal or unethical breeding activity, you can confidentially report it
                     to{' '}
                     <a
-                      href="mailto:report@puppybreeder.pro"
+                      href={`mailto:${REPORT_EMAIL}`}
                       className="text-primary font-bold hover:underline"
                       data-testid="report-email-link"
                     >
-                      report@puppybreeder.pro
+                      {REPORT_EMAIL}
                     </a>
                     , because protecting dogs and the families who love them is the
                     foundation of everything we build.

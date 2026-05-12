@@ -3,13 +3,13 @@ export const OFFER_PRICING = {
     price: 99,
     period: 'month',
     displayPrice: '$99',
-    note: 'or $999/year (save $189)',
+    note: 'or $990/year (save $198)',
   },
   yearly: {
-    price: 999,
+    price: 990,
     period: 'year',
-    displayPrice: '$999',
-    note: 'equals $83.25/month',
+    displayPrice: '$990',
+    note: 'equals $82.50/month',
   },
   setupFee: 349,
 };

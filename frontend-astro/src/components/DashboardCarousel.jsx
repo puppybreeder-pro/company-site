@@ -55,11 +55,16 @@ const Slide = ({ slide, isActive }) => (
     aria-hidden={!isActive}
   >
     <div className="p-8">
-      <div className="rounded-lg overflow-hidden shadow-xl mb-6">
+      <div className="w-fit max-w-full mx-auto rounded-lg overflow-hidden shadow-xl mb-6">
         <img
           src={slide.image}
-          alt={slide.title}
-          className="w-full h-auto"
+          alt={slide.imageAlt ?? slide.title}
+          className="block h-auto max-w-full w-auto border-0"
+          style={
+            slide.imageInsetClipPx != null
+              ? { clipPath: `inset(${slide.imageInsetClipPx}px)` }
+              : undefined
+          }
           loading="lazy"
           draggable="false"
         />

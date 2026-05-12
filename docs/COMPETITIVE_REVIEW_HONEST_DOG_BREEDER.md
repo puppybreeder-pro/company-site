@@ -73,12 +73,12 @@ Julie's page is effective at demonstrating expertise and building trust through 
 
 | Dimension | Honest Dog Breeder | PuppyBreeder.PRO |
 |---|---|---|
-| Price | $4,950–$12,500 one-time | $79/mo + $150 setup |
-| Timeline | 8–12 weeks | 48 hours |
+| Price | $4,950–$12,500 one-time | $99/mo + $349 setup |
+| Timeline | 8–12 weeks | 72 hours |
 | Platform | WordPress (you own it) | Managed SaaS (we host it) |
 | Copy writing | Yes — co-written on calls | No — breeder writes, AI assists |
 | Training | Yes — taught to self-manage | Yes — quick training session |
-| Ongoing cost | Hosting only (~$10-30/mo) | $79/mo subscription |
+| Ongoing cost | Hosting only (~$10-30/mo) | $99/mo subscription |
 | Design approach | Custom from scratch | Breed-specific templates |
 | Dependency | None after delivery | Ongoing (managed hosting, updates) |
 | SEO | Build it in | Built in |
@@ -86,7 +86,7 @@ Julie's page is effective at demonstrating expertise and building trust through 
 | CMS for puppies | WordPress (manual) | Purpose-built dashboard |
 
 ### Our advantage
-We're dramatically faster (48hrs vs 8-12 weeks), dramatically cheaper ($79/mo vs $5K+), and purpose-built (breeding-specific dashboard vs generic WordPress). We also provide ongoing managed hosting, so the breeder never has to think about updates, security, or any of that.
+We're dramatically faster (72hrs vs 8-12 weeks), dramatically cheaper ($99/mo vs $5K+), and purpose-built (breeding-specific dashboard vs generic WordPress). We also provide ongoing managed hosting, so the breeder never has to think about updates, security, or any of that.
 
 ### Their advantage
 - She **writes the copy with you** — this is huge. Most breeders HATE writing.
@@ -152,7 +152,7 @@ Our site sells a product ("Everything You Need, Nothing You Don't"). We should s
 
 **Proposed HowItWorks** (more personal, more relational):
 1. **Let's Talk** — "A free 30-minute call about your breeding program, your dogs, and what matters most to you."
-2. **We Build It** — "We design and launch your breed-specific site, usually within 48 hours."
+2. **We Build It** — "We design and launch your breed-specific site, usually within 72 hours."
 3. **We Walk You Through It** — "Quick training session, and you're in control. Steven's an email away if you ever need help."
 
 The key shift: "Steven's an email away" signals a person, not a ticket system.

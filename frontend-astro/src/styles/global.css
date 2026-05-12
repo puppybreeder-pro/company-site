@@ -300,3 +300,29 @@ button, a, input, textarea, select {
 
 [data-reveal][data-reveal-delay="1"] { transition-delay: 100ms; }
 [data-reveal][data-reveal-delay="2"] { transition-delay: 200ms; }
+
+/* Self-hosted fonts — avoids render-blocking Google Fonts CSS (after @import per PostCSS rules) */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/instrument-sans-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/instrument-serif-400-normal-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/instrument-serif-400-italic-latin.woff2') format('woff2');
+}
