@@ -9,6 +9,9 @@ const srcDir = fileURLToPath(new URL('./src', import.meta.url));
 
 export default defineConfig({
   site: 'https://www.puppybreeder.pro',
+  build: {
+    inlineStylesheets: 'always',
+  },
   integrations: [
     react(),
     icon(),

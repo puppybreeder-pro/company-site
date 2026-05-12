@@ -57,9 +57,13 @@ export const OfferHero = () => {
         <img
           src="/images/hero-bg.jpg"
           alt="Professional dog breeder with dogs"
+          width={1200}
+          height={1310}
+          decoding="async"
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
+        <div className="absolute inset-0 bg-linear-to-r from-background/95 via-background/85 to-background/60" />
       </div>
 
       <div className="container-custom relative z-10">
