@@ -1,5 +1,5 @@
 ---
-import { BRAND_EMAIL, COMPANY_LEGAL_NAME, TERMS_EMAIL } from '../../constants/index.js';
+import { BRAND_EMAIL, COMPANY_LEGAL_NAME, PRIVACY_EMAIL, TERMS_EMAIL } from '../../constants/index.js';
 ---
 
 <article class="section-padding pb-24">
@@ -19,6 +19,11 @@ import { BRAND_EMAIL, COMPANY_LEGAL_NAME, TERMS_EMAIL } from '../../constants/in
           PuppyBreeder.PRO (&ldquo;<strong>we</strong>,&rdquo;
           &ldquo;<strong>us</strong>,&rdquo; or &ldquo;<strong>our</strong>&rdquo;) (&ldquo;<strong>Services</strong>&rdquo;).
           By using our Services, you agree to these Terms. If you do not agree, do not use the Services.
+          Our{' '}
+          <a href="/privacy" class="text-primary underline underline-offset-2 hover:text-primary/80">
+            Privacy Policy
+          </a>{' '}
+          describes how we handle personal information.
           Any questions or concerns about these Terms may be sent by email to{' '}
           <a href={`mailto:${TERMS_EMAIL}`} class="text-primary underline underline-offset-2 hover:text-primary/80">
             {TERMS_EMAIL}
@@ -77,11 +82,13 @@ import { BRAND_EMAIL, COMPANY_LEGAL_NAME, TERMS_EMAIL } from '../../constants/in
         </h2>
         <p>
           Fees are as quoted on our site, in your order, or in a separate agreement. Unless stated otherwise,
-          fees are in the currency shown at checkout. Fees are non-refundable unless a separate written
-          agreement says otherwise or applicable law requires otherwise. You may cancel a subscription at any
-          time, and your account will remain active until the end of the payment term you have already paid for.
-          You are responsible for applicable taxes imposed on your purchase or use of the Services, except taxes
-          based on our net income. If you dispute a charge, contact us promptly so we can review it with you.
+          fees are in the currency shown at checkout. For eligible purchases, we offer a 15-day trial or
+          satisfaction guarantee as stated in the offer. You may request a refund during that 15-day period
+          according to the offer terms. After the 15-day period, fees are non-refundable unless a separate written
+          agreement says otherwise or applicable law requires otherwise. You may cancel a subscription at any time,
+          and your account will remain active until the end of the payment term you have already paid for. You are
+          responsible for applicable taxes imposed on your purchase or use of the Services, except taxes based on
+          our net income. If you dispute a charge, contact us promptly so we can review it with you.
         </p>
       </section>
 
@@ -194,8 +201,13 @@ import { BRAND_EMAIL, COMPANY_LEGAL_NAME, TERMS_EMAIL } from '../../constants/in
           12. Privacy
         </h2>
         <p>
-          We collect and use personal information as needed to operate the Services, respond to inquiries, and
-          meet legal obligations. If you have questions about personal information we process, contact us at{' '}
+          Our collection, use, and disclosure of personal information is described in our{' '}
+          <a href="/privacy" class="text-primary underline underline-offset-2 hover:text-primary/80">
+            Privacy Policy
+          </a>. For privacy requests or questions about personal information, contact{' '}
+          <a href={`mailto:${PRIVACY_EMAIL}`} class="text-primary underline underline-offset-2 hover:text-primary/80">
+            {PRIVACY_EMAIL}
+          </a>. For general product or billing inquiries, you may also use{' '}
           <a href={`mailto:${BRAND_EMAIL}`} class="text-primary underline underline-offset-2 hover:text-primary/80">
             {BRAND_EMAIL}
           </a>.

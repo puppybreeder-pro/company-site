@@ -25,7 +25,7 @@ export const offerFaqData = [
   },
   {
     question: 'Can I cancel anytime?',
-    answer: "We want you to stay because it works, not because you're locked in. 15-day 100% satisfaction guarantee — if you're not happy, full refund. After that, cancel anytime with no long-term contracts.",
+    answer: "We want you to stay because it works, not because you're locked in. We offer a 15-day 100% satisfaction guarantee — if you're not happy, you get your money back during the trial period. After that, cancel anytime with no long-term contract; fees are non-refundable for the current billing period unless applicable law requires otherwise.",
   },
   {
     question: 'How do I add new puppies or update listings?',

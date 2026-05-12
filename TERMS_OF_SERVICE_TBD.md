@@ -15,15 +15,31 @@ These items were intentionally left out of the public Terms of Service or kept n
 
 ## Refunds, Cancellations, and Chargebacks
 
-- Confirm whether "no refunds" is acceptable for all customer types and jurisdictions served.
-- Confirm whether cancellation should take effect at the end of monthly, annual, or other paid terms.
+**Addressed in public Terms and FAQ copy:** 15-day trial / satisfaction guarantee messaging is preserved; refund requests are available during the 15-day period according to the offer terms; after the 15-day period, fees are non-refundable unless a separate written agreement says otherwise or applicable law requires otherwise. Customers can cancel anytime, and accounts remain active until the end of the paid payment term.
+
+**Still to confirm with counsel and operations:**
+
+- Confirm whether the 15-day trial / refund window and post-trial "no refunds" position are acceptable for all customer types and jurisdictions served.
+- Define the exact start and end of the 15-day period operationally (for example, order date, first payment date, account activation, or site launch).
+- Confirm how cancellation works for monthly, annual, discounted, promotional, or custom-paid terms.
 - Decide whether to add a chargeback/dispute process if payment volume or disputes increase.
 
 ## Privacy
 
-- Decide whether to publish a separate Privacy Policy.
-- Confirm what personal information is collected, where it is stored, which vendors process it, and how long it is retained.
-- Confirm whether Canadian privacy law, US state privacy law, or other privacy rules require additional disclosures.
+**Addressed in public Privacy Policy (`/privacy`):** Canadian private-sector privacy principles (PIPEDA and Alberta where applicable), categories of information, purposes, Google Analytics/cookies, sharing, cross-border processing, retention, security, Canadian access/correction rights, cautious US state disclosures (including California CCPA/CPRA categories and request process), children, breeder responsibilities for their own site visitors, automated decision-making, and contact at `privacy@puppybreeder.pro`.
+
+**Conservative edits already made:** removed or softened claims that are hard to verify before a vendor/cookie audit, including broad "compliance" language, "service providers are permitted only..." wording, "contractual safeguards" wording, and definitive "no sharing for cross-context behavioral advertising" language. The current public Policy says we do not sell personal information for money and will provide required notices/choices if analytics, advertising, or similar technologies create opt-out rights.
+
+**Still to confirm with counsel and operations:**
+
+- Map the Privacy Policy’s described categories to **actual** data flows (forms, CRM, email, payments, hosting, analytics, scheduling, support tools) and update the Policy if anything is missing or overstated.
+- Confirm whether **Alberta PIPA** (private sector) requires any additional local wording beyond PIPEDA for your customer base.
+- **Google Analytics is confirmed in use** on the marketing site and is offered/configured for breeder websites. Review GA configuration: IP masking / Google Signals / Ads personalization / data retention / user-ID settings / consent mode. Determine whether current configuration creates any CCPA/CPRA "sale/share" or other US state opt-out mechanism requirement.
+- Confirm whether advertising pixels, retargeting, email marketing lists, or other non-essential tracking tools are used on the marketing site or customer websites. If yes, update cookie/consent mechanics and the Privacy Policy accordingly.
+- Decide whether each customer breeder website needs its own generated privacy notice or a standard privacy clause explaining Google Analytics, forms, applications, and customer-controlled data collection.
+- Confirm **subprocessor / vendor list** publication (optional) and **data processing agreement** templates for breeder customers who need them.
+- Align **retention schedules** with backups, logs, and accounting reality; document internally.
+- Confirm whether the business is above any US state privacy law thresholds (for example revenue, number of consumers/households, or percentage of revenue from personal information). If not, keep US disclosures cautious and avoid implying full statutory coverage.
 
 ## Intellectual Property and Account Exit
 
@@ -68,3 +84,12 @@ These items were intentionally left out of the public Terms of Service or kept n
 
 - Decide whether to add a process for third-party complaints about customer content, images, logos, or breeder claims.
 - If US customers or hosted user content become significant, ask counsel whether DMCA or Canadian notice-and-notice language is needed.
+
+## Reporting Confidentiality
+
+**Addressed in public report page copy:** removed the absolute "never shared" statement and replaced it with "we do not share your identity or contact information with the breeder in question unless legally required."
+
+**Still to confirm operationally:**
+
+- Define who can access reports internally and how long report records are retained.
+- Decide whether report identities should be anonymized, redacted, or separated from report details by default.
