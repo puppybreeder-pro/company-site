@@ -95,13 +95,13 @@ const defaultOfferSchema = includeOfferSchema ? {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
-    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
-    {defaultOfferSchema && <script type="application/ld+json" set:html={JSON.stringify(defaultOfferSchema)} />}
+    {faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    {defaultOfferSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(defaultOfferSchema)} />}
 
     {gaMeasurementId && (
       <>
-        <script type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
+        <script is:inline type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
         <script type="text/partytown" is:inline define:vars={{ gaMeasurementId }}>
           window.dataLayer = window.dataLayer || [];
           function gtag() {

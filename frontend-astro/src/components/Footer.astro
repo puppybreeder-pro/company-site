@@ -27,7 +27,7 @@ import { BRAND_NAME, BRAND_SUFFIX } from "../constants";
           {
             breeds
               .slice(0, 4)
-              .map((breed, index) => (
+              .map((breed) => (
                 <span class="text-xs bg-accent/10 text-accent px-2 py-1 rounded">
                   {breed}
                 </span>
@@ -45,7 +45,7 @@ import { BRAND_NAME, BRAND_SUFFIX } from "../constants";
         <h4 class="font-semibold text-foreground mb-4">Product</h4>
         <ul class="space-y-2">
           {
-            footerLinks.product.map((link, index) => (
+            footerLinks.product.map((link) => (
               <li>
                 <a
                   href={`/#${link.id}`}
@@ -63,7 +63,7 @@ import { BRAND_NAME, BRAND_SUFFIX } from "../constants";
         <h4 class="font-semibold text-foreground mb-4">Support</h4>
         <ul class="space-y-2">
           {
-            footerLinks.support.map((link, index) => (
+            footerLinks.support.map((link) => (
               <li>
                 {link.id ? (
                   <a
