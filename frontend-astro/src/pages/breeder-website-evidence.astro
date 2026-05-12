@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EvidenceHeader from '../components/evidence/EvidenceHeader.astro';
+import EvidenceHero from '../components/evidence/EvidenceHero.astro';
+import BreederWebsiteEvidenceContent from '../components/evidence/BreederWebsiteEvidenceContent.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = 'Dog Breeder Website Research & Buyer Trust — PuppyBreeder.PRO';
+const pageDescription =
+  'Research on online dog photos and listings, breeder case studies on inquiries and organic traffic, and how PuppyBreeder.PRO applies those lessons for professional breeders.';
+const canonicalUrl = 'https://www.puppybreeder.pro/breeder-website-evidence';
+const ogImage = new URL('/images/og-default.jpg', 'https://www.puppybreeder.pro').href;
+
+const datePublished = '2026-05-12';
+const dateModified = '2026-05-12';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Dog Breeder Websites & Buyer Trust',
+  description: pageDescription,
+  datePublished,
+  dateModified,
+  author: {
+    '@type': 'Organization',
+    name: 'PuppyBreeder.PRO',
+    url: 'https://www.puppybreeder.pro',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'PuppyBreeder.PRO',
+    url: 'https://www.puppybreeder.pro',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.puppybreeder.pro/favicon.svg',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `${canonicalUrl}#webpage`,
+  },
+  image: ogImage,
+  url: canonicalUrl,
+  citation: [
+    'https://pubmed.ncbi.nlm.nih.gov/25495493/',
+    'https://doi.org/10.3390/ani10010152',
+    'https://nobledigital.tech/case-studies/catskill-mountain-labradors/',
+    'https://www.wd-strategies.com/projects/enhancing-online-visibility-and-organic-growth-for-a-dog-breeder',
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://www.puppybreeder.pro/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Website research',
+      item: canonicalUrl,
+    },
+  ],
+};
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  ogImage={ogImage}
+  includeFaqSchema={false}
+  includeOfferSchema={false}
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <EvidenceHeader />
+  <main>
+    <EvidenceHero />
+    <div data-reveal>
+      <BreederWebsiteEvidenceContent />
+    </div>
+  </main>
+  <Footer />
+</Layout>

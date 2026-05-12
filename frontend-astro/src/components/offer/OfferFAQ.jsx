@@ -22,7 +22,17 @@ export const OfferFAQ = () => {
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">
-                  {faq.answer}
+                  <p>{faq.answer}</p>
+                  {faq.moreLink ? (
+                    <p className="mt-3">
+                      <a
+                        href={faq.moreLink.href}
+                        className="text-primary font-medium underline underline-offset-2 hover:text-primary/80"
+                      >
+                        {faq.moreLink.label}
+                      </a>
+                    </p>
+                  ) : null}
                 </AccordionContent>
               </AccordionItem>
             ))}

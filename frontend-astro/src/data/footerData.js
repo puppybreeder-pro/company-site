@@ -10,6 +10,7 @@ export const footerLinks = {
     { label: 'Terms of Service', href: '/terms' },
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Ethics Policy', href: '/ethical-breeding' },
+    { label: 'Website Research', href: '/breeder-website-evidence' },
     { label: 'Report a Breeder', href: '/report' },
   ],
 };

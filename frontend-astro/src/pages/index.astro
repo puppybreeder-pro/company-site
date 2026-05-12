@@ -17,6 +17,8 @@ import { offerFaqData } from '../data/offerFaqData';
 const homeTitle = 'PuppyBreeder.PRO — Professional Websites for Dog Breeders';
 const homeDescription = 'Stop fighting with website builders. Get a professionally managed breeding website launched in 72 hours — with everything included for one transparent price.';
 
+const siteOrigin = 'https://www.puppybreeder.pro';
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -25,7 +27,7 @@ const faqSchema = {
     name: faq.question,
     acceptedAnswer: {
       '@type': 'Answer',
-      text: faq.answer,
+      text: faq.moreLink ? `${faq.answer} More: ${siteOrigin}${faq.moreLink.href}` : faq.answer,
     },
   })),
 };
