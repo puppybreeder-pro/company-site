@@ -1,8 +1,20 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+function pickOneRandom(items) {
+  if (!items.length) return null;
+  return items[Math.floor(Math.random() * items.length)];
+}
+
 export const TestimonialsCarousel = ({ testimonials }) => {
+  const displayedTestimonials = useMemo(() => {
+    const required = testimonials.filter((t) => !t.optional);
+    const optional = testimonials.filter((t) => t.optional);
+    const picked = pickOneRandom(optional);
+    return picked ? [...required, picked] : required;
+  }, [testimonials]);
+
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
@@ -32,8 +44,8 @@ export const TestimonialsCarousel = ({ testimonials }) => {
     <div className="relative max-w-2xl mx-auto">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {testimonials.map((t, index) => (
-            <div key={index} className="flex-none w-full px-4">
+          {displayedTestimonials.map((t) => (
+            <div key={`${t.author}-${t.location}`} className="flex-none w-full px-4">
               <div className="p-8 md:p-10 bg-card rounded-xl border shadow">
                 <div className="flex gap-1 mb-5">
                   {Array.from({ length: t.rating }).map((_, i) => (
