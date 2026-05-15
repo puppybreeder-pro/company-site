@@ -30,7 +30,7 @@ export const adminOutcomes = [
     icon: "calendar",
     title: "One-Click Status Updates",
     description:
-      "Mark a puppy Reserved in one click. No more 'is this one still available?' messages from confused families.",
+      "Mark a puppy as Reserved or Adopted in one click. No more 'is this one still available?' messages from confused families.",
   },
   {
     icon: "image",
@@ -46,9 +46,9 @@ export const adminOutcomes = [
   },
   {
     icon: "sparkles",
-    title: "Descriptions Written for You",
+    title: "Descriptions Helped by AI for You",
     description:
-      "Staring at a blank description field at 11pm? One click and it's written for you.",
+      "Staring at a blank description field at 11pm? One click and it's drafted for you to personalize.",
   },
 ];
 
